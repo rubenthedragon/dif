@@ -1,6 +1,4 @@
-<html>
-<head>
-<title>Login</title>
+
 <?php
 try {
 $conn = new PDO("mysql:host=localhost:3306;dbname=badeend;", "root", "aly99");
@@ -27,7 +25,7 @@ $query->execute(array('username' => $username, 'password' => $password));
 $count = $query->fetchColumn();
 
 if ($count == "1"){
-echo "Logged in."; // LOGIN SCRIPT  ,,, ga naar ... pagina
+header('Location: plattegrondv3.html'); // LOGIN SCRIPT  ,,, ga naar ... pagina
 } else {
 echo "Gebruikersnaam is onjuist/wachtwoord combinatie is verkeerd";
 }
@@ -44,12 +42,3 @@ echo "Gebruikersnaam mag niet leeg zijn";
 
 ?>
 
-</head>
-<body>
-<form action="" method="POST">
-<input type="text" name="username" placeholder="Username" />
-<input type="password" name="password" placeholder="Password" />
-<button type="submit" name="submit">Login</button>
-</form>
-</body>
-</html> 

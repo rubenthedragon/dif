@@ -10,15 +10,15 @@
         <div class="round">
             <div class="formbox">
                 <table>
-                    <form class="loginf" action="plattegrondv3.html">
+                    <form class="loginf" method="post" action="loginCode.php">
                         <tr>
-                            <td>Gebruikersnaam: </td> <td><input type="text"></td>
+                            <td>Gebruikersnaam: </td> <td><input type="text" name="username" placeholder="Gebruikersnaam"></td>
                         </tr>
                         <tr>
-                            <td>Wachtwoord:</td> <td><input type="text"></td>
+                            <td>Wachtwoord:</td> <td><input type="password" name="password" placeholder="Wachtwoord"></td>
                         </tr>
                         <tr>
-                            <td><input type="submit" value="Login"></td>
+                            <td><input type="submit" value="Login" name="submit"></td>
                             <td><a href="plattegrondv3.html">Wachtwoord vergeten</a></td>
                         </tr>
                         <tr>
@@ -31,3 +31,4 @@
     </div>
 </body>
 </html>
+

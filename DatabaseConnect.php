@@ -1,11 +1,9 @@
-
-
- <?php
+<?php
 
 
 
 $conn = new PDO("mysql:host=localhost:3306;dbname=badeend;", "root", "aly99");
-if(isset($_POST['Hoi']))
+if(isset($_POST['Register']))
 	 { 
 		$passwordRepeat = $_POST['HerhaalWachtwoord'];
 		$username = $_POST['Gebruikersnaam'];
