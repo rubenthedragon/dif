@@ -377,9 +377,5 @@ function checkPass()
 		reserveren.style.backgroundColor = colorYellow;
 
 	}
-			
 	
-	
-	
-		
 

@@ -1,5 +1,6 @@
 
 <?php
+session_start();
 try {
 $conn = new PDO("mysql:host=localhost:3306;dbname=badeend;", "root", "aly99");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
