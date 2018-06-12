@@ -1,0 +1,200 @@
+body {
+    background-color: yellow;
+}
+
+.mid {
+    width: 400px;
+    height: 510px;
+    margin-left: 40%;
+    margin-top: 10%;
+    background-color: white;
+}
+
+.round {
+    position:absolute;
+    width: 300px;
+    height:130px;
+    background-color: lightgray;
+    margin-top: 300px;
+    border-radius: 15px;
+    margin-left: 50px;
+}
+
+.logo {
+    position: absolute;
+    margin-top:50px;
+    width:240px;
+    height:160px;
+    margin-left:80px;
+    background-image: url("logo.jpg");
+    background-size: contain;
+}
+
+.formbox {
+    position:absolute;
+    width: 280px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.content {
+    position: absolute;
+    width: calc(100% - 100px);
+    height:calc(100% - 100px);
+    margin-top:50px;
+    margin-left:50px;
+    margin-right:50px;
+    margin-bottom:50px;
+    background-color: white;
+}
+
+.floorlist {
+    position: relative;
+    float:right;
+    width: 110px;
+    height: 100%;
+}
+
+.floors {
+    width: 55px;
+    height:100%;
+    margin-right:55px;
+    position:absolute;
+}
+
+.floorbox{
+    width: 90px;
+    height: 50px;
+    border-style:solid;
+    border-width:2px;
+    position:absolute;
+}
+
+#floor1 {
+    margin-top:20px;
+}
+
+#floor2 {
+    margin-top:90px;
+}
+
+#floor3 {
+    margin-top:160px;
+}
+
+.floorsquare{
+    width:30px;
+    height: 10px;
+    position:absolute;
+    float:left;
+    margin-left:10px;
+    border-style:solid;
+    border-width: 1px;
+}
+
+#onefloorone {
+    margin-top:20px;
+}
+
+#twofloorone {
+    margin-top:10px;
+}
+
+#twofloortwo {
+    margin-top:30px;
+}
+
+#threefloorone {
+    margin-top:5px;
+}
+
+#threefloortwo {
+    margin-top:20px;
+}
+
+#threefloorthree {
+    margin-top:35px;
+}
+
+.floornr{
+    position:absolute;
+    margin-left:55px;
+}
+
+.floortext {
+    font-size: 25px;
+    margin-top:10px;
+    margin-left:10px;
+}
+
+.pg {
+    position: absolute;
+    width: calc(100% - 420px);
+    height:100%;
+    margin-right:120px;
+    margin-left:300px;
+    display:none;
+}
+
+.details {
+    position:absolute;
+    height:100%;
+    width: 300px;
+    background-color:rgb(235, 235, 235);
+    z-index:1;
+}
+
+.roomdetails {
+    margin-top: 50px;
+    margin-left: 30px;
+
+}
+
+.roomdetailstable {
+    margin-top:100px;
+    border-collapse: collapse;
+}
+
+.roomdetailstable, detailstable {
+    border-style: solid;
+    border-width: 2px;
+}
+
+.occupied {
+    position:absolute;
+    margin-left:185px;
+    margin-top:70px;
+}
+
+.roomname{
+    position: absolute;
+    margin-left:35px;
+    margin-top:70px;
+}
+
+.ruimte{
+    border-style:solid;
+    border-width: 2px;
+    position: absolute;
+}
+
+#ruimte1 {
+    width:75px;
+    height:75px;
+    margin-top:50px;
+    margin-left:50px;
+}
+
+#ruimte2 {
+    width:75px;
+    height:125px;
+    margin-top:50px;
+    margin-left:50px;
+}
+
+#ruimte3 {
+    width:75px;
+    height:150px;
+    margin-top:50px;
+    margin-left:50px;
+}

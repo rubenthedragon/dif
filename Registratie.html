@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<script src="ShowWachtwoord.js"></script>
+	
+	<title>Registreer</title>
+	<style>
+
+	#table1 {
+    border-collapse: separate;
+    border-spacing: 1px;
+}
+
+
+	</style>
+
+
+
+
+
+
+
+
+
+	
+</head>
+<body>
+	<div id="container"> </div> 
+	<div id="RegistrerenText">Registreren</div>
+	<div id="MeldjenuaanText">Meld je nu aan</div> 
+	<div id="afbeeldingDIF"><img src="https://www.dutchinnovationpark.nl/wp-content/uploads/2017/10/dif4.png" width="180%", height="180%"></div>
+
+
+
+
+
+	<div id="register">
+<form method="post" action="Registratie.php">
+	
+	<!--errors-->
+	<?php include('errors.php'); ?>
+
+	<table id= "table1" align="center" , width="100%">
+	
+		
+<tr>
+	<td><h3>Gebruikersnaam:</h3></td>
+	<td><input type="text" placeholder="Gebruikersnaam*" name="Gebruikersnaam" id="GebruikersNaam" required=""></td>
+</tr>
+<tr>
+	<td><h3>Wachtwoord:</h3></td>
+	<td><input type="password", , placeholder="Wachtwoord*" name="Wachtwoord", id="wachtwoordInput" required=""></td>
+	
+</tr>
+<tr>
+	<td><h3>Herhaal wachtwoord:</h3></td>
+	<td><input type="password" placeholder="Herhaal wachtwoord*" name="HerhaalWachtwoord", id="HerhaalWachtwoordInput" onkeyup="checkPass(); return false;"required=""></td>
+	 <span id="confirmMessage" class="confirmMessage"></span>
+	
+	
+</tr>
+<tr>
+	<td><input type="button" value="Registreer" name="Register" onclick="DatabaseConnect.php"  ></td>
+	<td><h5>Wachtwoord zichtbaar:</h5></td>
+</tr>
+
+	
+
+	<div id="inloggen">
+	<h5>Al een account?</h5> </div>
+	<div id= "link"> <a href="Reserveren.html">Login</a> </div>
+	
+	
+	<div id="checkbox">
+	<input type="checkbox" onclick="myFunction()">
+	</div>
+
+	
+</table>
+
+
+
+</form>
+
+</div>
+
+
+</body>
+</html>

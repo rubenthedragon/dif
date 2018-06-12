@@ -1,0 +1,202 @@
+body {
+	background: 	yellow;
+}
+
+/*REGISTRATIE*/
+
+#container {
+	position: absolute;
+	height: 65%; 
+	width: 50%;
+	margin-top: 6%;
+	margin-bottom: 12.5%;
+	margin-left: 25%;
+	margin-right: 25%;
+	border-radius: 5%;
+	background: white;
+	min-width:410px;
+}
+
+#afbeeldingDIF {
+	position: absolute;
+	width: 45%;
+	height: 80%;
+	margin-top: 5%;
+	margin-left: 5%;
+	background-image: url("https://www.dutchinnovationpark.nl/wp-content/uploads/2017/10/dif4.png");
+	background-size: contain;
+	background-repeat:no-repeat;
+}
+
+#registratieform {
+	position: absolute;
+	width: 50%;
+	height:100%;
+	margin-left:45%;
+	margin-top:5%;
+	margin-right:3%;
+	min-width:400px;
+}
+
+#RegistrerenText {
+	position: absolute;
+	font-size: 450%;
+}
+
+#MeldjenuaanText {
+	position: absolute;
+	font-size: 200%;
+	margin-left: 20px;
+	margin-top: 80px;
+	height:30px;
+}
+
+#register {
+	position: absolute;
+	margin-top:100px;
+}
+
+#checkbox {
+	position: absolute;
+	margin-left: 105%;
+	margin-top: 84%;
+	width: 40%;
+	height: 43%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 1300px) {
+	#afbeeldingDIF{
+		display:none;
+	}
+
+	#registratieform{
+		margin-left:20%;
+	}
+}
+
+@media screen and (max-width: 900px){
+	#registratieform{
+		margin-left:5%;
+	}
+}
+
+/*RESERVEREN*/
+
+#container2 {
+	position: absolute;
+	margin: 50px;
+	height: calc(100% - 100px);
+	width: calc(100% - 100px);
+	background: white;
+}
+
+.column {
+    float: left;
+    width: 150px;
+    padding:10px;
+    height: 50px; 
+    border: 1px solid;
+	margin-right: 10px;
+	text-align: center;
+	transition-duration: 0.4s;
+	background-color: white;
+	opacity: 1;
+}
+
+.column:hover {
+    transition: 0.3s;
+    background-color: yellow;
+}
+
+.row0 {
+	margin-top: 15px;
+	margin-left: 125px;
+	margin-right: 20px;
+	position: absolute;
+}
+
+.row1 {
+	margin-top: 100px;
+	margin-left: 50px;
+	margin-right: 20px;
+}
+
+.row2 {
+	margin-top: 200px;
+	margin-left: 50px;
+	margin-right: 20px;
+}
+
+.row3 {
+	margin-top: 300px;
+	margin-left: 50px;
+	margin-right: 20px;
+}
+
+.row4 {
+	margin-top: 400px;
+	margin-left: 50px;
+	margin-right: 20px;
+}
+
+.row5 {
+	margin-top: 500px;
+	margin-left: 120px;
+	margin-right: 20px;
+}
+
+#ReserverenBox {
+	margin-top: 20px;
+	margin-left: 20px;
+	position: absolute;
+	border: 1px solid;
+	height: 600px;
+	width: 420px;
+	position:relative;
+	animation:animateleft 0.4s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1};
+}
+
+/*Dropdown menu*/
+ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	float: right;
+}
+
+ul li {
+	float: left;
+	width: 200px;
+	height: 40px;
+	background-color: black;
+	opacity: .8;
+	line-height: 40px;
+	text-align: center;
+	font-size: 20px; 
+}
+
+ul li a {
+	text-decoration: none;
+	color: white;
+	display: block;
+}
+
+ul li a:hover {
+	background-color: purple;
+}
+
+ul li ul li {
+	display: none;
+}
+
+ul li:hover ul li {
+	display: block;
+}
+
+@media screen and (max-width: 600px) {
+    #ReserverenBox {
+        width: 100%;
+
+    }
+}
