@@ -1,12 +1,3 @@
-<?php 
-
-session_start();
-if(!isset($_SESSION["username"]))
-{
-    echo "Je bent niet ingelogt";
-}
-
- ?>
 <html>
 <head>
     <link rel="stylesheet" type="text/css" media="screen" href="mainv2.css" />
@@ -34,6 +25,8 @@ if(!isset($_SESSION["username"]))
                         </tr>
                     </table>
                 </div>
+                <p class="datumtext" id="datumtext">dd-mm-yyyy</p>
+                <input class="datum" id="datum" type="date">
                 <dif class="timebutton" id="time1" type="button" onclick="timeonclick(1)"><p>9:00 - 10:00</p></dif>
                 <dif class="timebutton" id="time2" type="button" onclick="timeonclick(2)"><p>10:00 - 11:00</p></dif>
                 <dif class="timebutton" id="time3" type="button" onclick="timeonclick(3)"><p>11:00 - 12:00</p></dif>
@@ -42,16 +35,16 @@ if(!isset($_SESSION["username"]))
                 <dif class="timebutton" id="time6" type="button" onclick="timeonclick(6)"><p>14:00 - 15:00</p></dif>
                 <dif class="timebutton" id="time7" type="button" onclick="timeonclick(7)"><p>15:00 - 16:00</p></dif>
                 <dif class="timebutton" id="time8" type="button" onclick="timeonclick(8)"><p>16:00 - 17:00</p></dif>
-                <dif class="timebutton" id="reserveerbtn"><p>reserveer</p></dif>
-            </div>           
+                <dif class="timebutton" id="reserveerbtn" type="button" onclick="reserve()"><p>reserveer</p></dif>
+            </div>
             <div class="pg" id="floor1p">
-                <div class="ruimte" id="ruimte1" id="DIF1.01" type="button" onclick="ajax('DIF1.01')"></div>
+                <div class="ruimte" id="ruimte1" id="DIF1.01" type="button" onclick="roomajax('DIF1.01')"></div>
             </div>
             <div class="pg" id="floor2p">
-                <div class="ruimte" id="ruimte2" id="DIF2.01" type="button" onclick="ajax('DIF2.01')"></div>                     
+                <div class="ruimte" id="ruimte2" id="DIF2.01" type="button" onclick="roomajax('DIF2.01')"></div>                     
             </div>
             <div class="pg" id="floor3p">
-                <div class="ruimte" id="ruimte3" id="DIF3.01" type="button" onclick="ajax('DIF3.01')"></div>          
+                <div class="ruimte" id="ruimte3" id="DIF3.01" type="button" onclick="roomajax('DIF3.01')"></div>          
             </div>
         </div>
 
@@ -89,3 +82,69 @@ if(!isset($_SESSION["username"]))
     </div>
 </body>
 </html>
+
+            <script>
+            function reserve()
+            {
+                var data = sendres();
+                reserveajax(data);
+            }
+
+            function sendres()
+            {
+                var user = getQueryVariable("username");
+                var datebox = document.getElementById("datum");
+                var datetext = datebox.value;
+                
+                var time;
+                var time1 = document.getElementById('time1');
+                var time2 = document.getElementById('time2');
+                var time3 = document.getElementById('time3');
+                var time4 = document.getElementById('time4');
+                var time5 = document.getElementById('time5');
+                var time6 = document.getElementById('time6');
+                var time7 = document.getElementById('time7');
+                var time8 = document.getElementById('time8');
+                
+                if(time1.style.backgroundColor == "yellow"){
+                    time = "9:00-10:00"
+                }
+                else if(time2.style.backgroundColor == "yellow"){
+                    time = "10:00-11:00"
+                }
+                else if(time3.style.backgroundColor == "yellow"){
+                    time = "11:00-12:00"
+                }
+                else if(time4.style.backgroundColor == "yellow"){
+                    time = "12:00-13:00"
+                }
+                else if(time5.style.backgroundColor == "yellow"){
+                    time = "13:00-14:00"
+                }
+                else if(time6.style.backgroundColor == "yellow"){
+                    time = "14:00-15:00"
+                }
+                else if(time7.style.backgroundColor == "yellow"){
+                    time = "15:00-16:00"
+                }
+                else if(time8.style.backgroundColor == "yellow"){
+                    time = "16:00-17:00"
+                }
+
+                var namebox = document.getElementById("roomname");
+                var nametext = namebox.textContent;
+                var package = "?room="+nametext+"&datum="+datetext+"&gebruiker="+user+"&tijd="+time;
+                return package;
+            }
+
+            function getQueryVariable(variable)
+            {
+                var query = window.location.search.substring(1);
+                var vars = query.split("&");
+                for (var i=0;i<vars.length;i++) {
+                        var pair = vars[i].split("=");
+                        if(pair[0] == variable){return pair[1];}
+                }
+                return(false);
+            }
+            </script>

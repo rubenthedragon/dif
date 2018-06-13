@@ -72,17 +72,39 @@ function showfloor(nr)
 
 var request = new XMLHttpRequest();
 
-function ajax(room)
+function reserveajax(package)
+{
+    request.onreadystatechange = handleReserveAjax;
+
+    request.open('GET', 'reserveer.php'+package, true);
+    request.send();
+}
+
+function handleReserveAjax()
+{
+    if(request.readyState === XMLHttpRequest.DONE)
+    {
+        if(request.status === 200)
+        {
+            var result = request.responseText;
+            console.log(request);
+        }
+        else{}       
+    }
+    else{}
+}
+
+function roomajax(room)
 {
     var detailstab = document.getElementById('details');
     detailstab.style.visibility = 'visible';
-    request.onreadystatechange = handleAjax;
+    request.onreadystatechange = handleRoomAjax;
 
     request.open('GET', 'getroom.php?roomname='+room, true);
     request.send();
 }
 
-function handleAjax()
+function handleRoomAjax()
 {
     if(request.readyState === XMLHttpRequest.DONE)
     {

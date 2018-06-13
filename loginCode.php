@@ -33,8 +33,7 @@ echo "Gebruikersnaam is onjuist/wachtwoord combinatie is verkeerd";
 */
 //met hash BCRYPT
 if(password_verify($password, $count['wachtwoord'])){
-	echo "right";
-	header('Location: plattegrondv3.html');
+	header("Location: plattegrondv3.php?username=$username#");
 } else {
 echo "Gebruikersnaam is onjuist/wachtwoord combinatie is verkeerd";
 }

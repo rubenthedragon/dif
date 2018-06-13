@@ -18,5 +18,4 @@
         echo ",";
         echo $result["beamer"];
     }     
-
 ?>
