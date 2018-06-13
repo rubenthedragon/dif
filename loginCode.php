@@ -10,18 +10,18 @@ echo 'ERROR: ' . $e->getMessage();
 
 if (isset($_POST['submit'])) {
 
-if(isset($_POST['username'])) {
+if(isset($_POST['email'])) {
 
 if(isset($_POST['password'])) {
 
-$username = $_POST['username'];
+$username = $_POST['email'];
 $password = $_POST['password'];
 
 $username = filter_var($username, FILTER_SANITIZE_STRING);
 $password = filter_var($password, FILTER_SANITIZE_STRING);
 
-$query = $conn->prepare("SELECT * FROM `gebruiker` WHERE `email` = :username");
-$query->execute(array('username' => $username));
+$query = $conn->prepare("SELECT * FROM `gebruiker` WHERE `email` = :email");
+$query->execute(array('email' => $username));
 
 $count = $query->fetch();
 /* //zonder hash//
@@ -34,7 +34,7 @@ echo "Gebruikersnaam is onjuist/wachtwoord combinatie is verkeerd";
 //met hash BCRYPT
 if(password_verify($password, $count['wachtwoord'])){
 	echo "right";
-	header('Location: plattegrondv3.php?email='+$username+'&'+$password);
+	header('Location: plattegrondv3.html');
 } else {
 echo "Gebruikersnaam is onjuist/wachtwoord combinatie is verkeerd";
 }

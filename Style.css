@@ -202,3 +202,21 @@ ul li:hover ul li {
 
     }
 }
+
+/*WachtwoordVergeten*/
+#container3 {
+	position: absolute;
+	height: 65%; 
+	width: 50%;
+	margin-top: 6%;
+	margin-bottom: 12.5%;
+	margin-left: 25%;
+	margin-right: 25%;
+	border-radius: 5%;
+	background: white;
+	min-width:410px;
+}
+
+#box {
+	
+}
