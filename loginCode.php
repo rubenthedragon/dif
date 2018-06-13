@@ -20,17 +20,24 @@ $password = $_POST['password'];
 $username = filter_var($username, FILTER_SANITIZE_STRING);
 $password = filter_var($password, FILTER_SANITIZE_STRING);
 
-$query = $conn->prepare("SELECT COUNT(`id_gebruiker`) FROM `gebruiker` WHERE `gebruikersnaam` = :username AND `wachtwoord` = :password");
-$query->execute(array('username' => $username, 'password' => $password));
+$query = $conn->prepare("SELECT * FROM `gebruiker` WHERE `gebruikersnaam` = :username");
+$query->execute(array('username' => $username));
 
-$count = $query->fetchColumn();
-
+$count = $query->fetch();
+/* //zonder hash//
 if ($count == "1"){
 header('Location: plattegrondv3.html'); // LOGIN SCRIPT  ,,, ga naar ... pagina
 } else {
 echo "Gebruikersnaam is onjuist/wachtwoord combinatie is verkeerd";
 }
-
+*/
+//met hash BCRYPT
+if(password_verify($password, $count['wachtwoord'])){
+	echo "right";
+	header('Location: plattegrondv3.html');
+} else {
+echo "Gebruikersnaam is onjuist/wachtwoord combinatie is verkeerd";
+}
 } else {
 echo "Wachtwoord mag niet leeg zijn";
 }

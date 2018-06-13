@@ -8,6 +8,7 @@ if(isset($_POST['Register']))
 		$passwordRepeat = $_POST['HerhaalWachtwoord'];
 		$username = $_POST['Gebruikersnaam'];
 		$password = $_POST['Wachtwoord'];
+        $hash = password_hash($password, PASSWORD_BCRYPT, array('cost'=>11));
 	 	if($password == $passwordRepeat)
 	 	{
 
@@ -18,7 +19,7 @@ if(isset($_POST['Register']))
     	$query = $conn->prepare($sql);
     	$results = $query->execute(array(
     		":Gebruikersnaam" => $username,
-    		":Wachtwoord" => $password
+    		":Wachtwoord" => $hash
     	));
     
     	if($results)
