@@ -64,6 +64,7 @@ body {
 	height: 43%;
 }
 
+
 /* Extra small devices (phones, 600px and down) */
 @media screen and (max-width: 1300px) {
 	#afbeeldingDIF{
@@ -145,6 +146,7 @@ body {
 	margin-left: 120px;
 	margin-right: 20px;
 }
+
 
 #ReserverenBox {
 	margin-top: 20px;
