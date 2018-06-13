@@ -11,13 +11,15 @@ if(isset($_POST['Register']))
 	 	{
 
 
-		$sql = "INSERT INTO gebruiker (email, wachtwoord)
-   					 VALUES (:Gebruikersnaam, :Wachtwoord)";
+		$sql = "INSERT INTO gebruiker (email, naam, wachtwoord, typee)
+   					 VALUES (:Gebruikersnaam, :Naam, :Wachtwoord, :Iets)";
 
     	$query = $conn->prepare($sql);
     	$results = $query->execute(array(
     		":Gebruikersnaam" => $username,
-    		":Wachtwoord" => $hash
+			":Naam" => "test",
+			":Wachtwoord" => $password,
+			":Iets" => "gebruiker"
     	));
     
     	if($results)

@@ -21,7 +21,7 @@ $username = filter_var($username, FILTER_SANITIZE_STRING);
 $password = filter_var($password, FILTER_SANITIZE_STRING);
 
 $query = $conn->prepare("SELECT * FROM `gebruiker` WHERE `email` = :username");
-$query->execute(array('username' => $username));
+$query->execute(array('email' => $username));
 
 $count = $query->fetch();
 /* //zonder hash//
