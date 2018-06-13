@@ -28,7 +28,7 @@
 							<span id="confirmMessage" class="confirmMessage"></span>	
 						</tr>
 						<tr>
-							<td><input type="submit" value="Registreer" name="Hoi"  ></td>
+							<td><input type="submit" value="Registreer" name="Register"  ></td>
 							<td>Wachtwoord zichtbaar:<input type="checkbox" onclick="myFunction()"></td>
 						</tr>
 						<tr class="spaceUnder">
