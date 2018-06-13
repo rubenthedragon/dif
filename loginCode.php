@@ -26,7 +26,7 @@ $query->execute(array('username' => $username, 'password' => $password));
 $count = $query->fetchColumn();
 
 if ($count == "1"){
-header('Location: plattegrondv3.html'); // LOGIN SCRIPT  ,,, ga naar ... pagina
+header('Location: plattegrondv3.php?username='+$username+'&'+$password); // LOGIN SCRIPT  ,,, ga naar ... pagina
 } else {
 echo "Gebruikersnaam is onjuist/wachtwoord combinatie is verkeerd";
 }
