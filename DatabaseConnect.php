@@ -1,8 +1,6 @@
 <?php
 
-
-
-$conn = new PDO("mysql:host=localhost:3306;dbname=badeend;", "root", "aly99");
+require 'databaseconnectie.php';
 if(isset($_POST['Register']))
 	 { 
 		$passwordRepeat = $_POST['HerhaalWachtwoord'];
@@ -13,7 +11,7 @@ if(isset($_POST['Register']))
 	 	{
 
 
-		$sql = "INSERT INTO gebruiker (gebruikersnaam, wachtwoord)
+		$sql = "INSERT INTO gebruiker (email, wachtwoord)
    					 VALUES (:Gebruikersnaam, :Wachtwoord)";
 
     	$query = $conn->prepare($sql);

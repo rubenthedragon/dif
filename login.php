@@ -12,7 +12,7 @@
                 <table>
                     <form class="loginf" method="post" action="loginCode.php">
                         <tr>
-                            <td>Gebruikersnaam: </td> <td><input type="text" name="username" placeholder="Gebruikersnaam"></td>
+                            <td>Gebruikersnaam: </td> <td><input type="text" name="email" placeholder="Gebruikersnaam"></td>
                         </tr>
                         <tr>
                             <td>Wachtwoord:</td> <td><input type="password" name="password" placeholder="Wachtwoord"></td>
