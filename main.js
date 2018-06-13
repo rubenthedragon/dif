@@ -74,6 +74,8 @@ var request = new XMLHttpRequest();
 
 function ajax(room)
 {
+    var detailstab = document.getElementById('details');
+    detailstab.style.visibility = 'visible';
     request.onreadystatechange = handleAjax;
 
     request.open('GET', 'getroom.php?roomname='+room, true);
@@ -103,4 +105,103 @@ function handleAjax()
         else{}       
     }
     else{}
+}
+
+function timeonclick(time){
+    var time1 = document.getElementById('time1');
+    var time2 = document.getElementById('time2');
+    var time3 = document.getElementById('time3');
+    var time4 = document.getElementById('time4');
+    var time5 = document.getElementById('time5');
+    var time6 = document.getElementById('time6');
+    var time7 = document.getElementById('time7');
+    var time8 = document.getElementById('time8');
+
+    if(time === 1){
+        time1.style.backgroundColor = 'yellow';
+        time2.style.backgroundColor = 'white';
+        time3.style.backgroundColor = 'white';
+        time4.style.backgroundColor = 'white';
+        time5.style.backgroundColor = 'white';
+        time6.style.backgroundColor = 'white';
+        time7.style.backgroundColor = 'white';
+        time8.style.backgroundColor = 'white';
+    }
+
+    if(time === 2){
+        time1.style.backgroundColor = 'white';
+        time2.style.backgroundColor = 'yellow';
+        time3.style.backgroundColor = 'white';
+        time4.style.backgroundColor = 'white';
+        time5.style.backgroundColor = 'white';
+        time6.style.backgroundColor = 'white';
+        time7.style.backgroundColor = 'white';
+        time8.style.backgroundColor = 'white';
+    }
+
+    if(time === 3){
+        time1.style.backgroundColor = 'white';
+        time2.style.backgroundColor = 'white';
+        time3.style.backgroundColor = 'yellow';
+        time4.style.backgroundColor = 'white';
+        time5.style.backgroundColor = 'white';
+        time6.style.backgroundColor = 'white';
+        time7.style.backgroundColor = 'white';
+        time8.style.backgroundColor = 'white';
+    }
+
+    if(time === 4){
+        time1.style.backgroundColor = 'white';
+        time2.style.backgroundColor = 'white';
+        time3.style.backgroundColor = 'white';
+        time4.style.backgroundColor = 'yellow';
+        time5.style.backgroundColor = 'white';
+        time6.style.backgroundColor = 'white';
+        time7.style.backgroundColor = 'white';
+        time8.style.backgroundColor = 'white';
+    }
+
+    if(time === 5){
+        time1.style.backgroundColor = 'white';
+        time2.style.backgroundColor = 'white';
+        time3.style.backgroundColor = 'white';
+        time4.style.backgroundColor = 'white';
+        time5.style.backgroundColor = 'yellow';
+        time6.style.backgroundColor = 'white';
+        time7.style.backgroundColor = 'white';
+        time8.style.backgroundColor = 'white';
+    }
+
+    if(time === 6){
+        time1.style.backgroundColor = 'white';
+        time2.style.backgroundColor = 'white';
+        time3.style.backgroundColor = 'white';
+        time4.style.backgroundColor = 'white';
+        time5.style.backgroundColor = 'white';
+        time6.style.backgroundColor = 'yellow';
+        time7.style.backgroundColor = 'white';
+        time8.style.backgroundColor = 'white';
+    }
+
+    if(time === 7){
+        time1.style.backgroundColor = 'white';
+        time2.style.backgroundColor = 'white';
+        time3.style.backgroundColor = 'white';
+        time4.style.backgroundColor = 'white';
+        time5.style.backgroundColor = 'white';
+        time6.style.backgroundColor = 'white';
+        time7.style.backgroundColor = 'yellow';
+        time8.style.backgroundColor = 'white';
+    }
+
+    if(time === 8){
+        time1.style.backgroundColor = 'white';
+        time2.style.backgroundColor = 'white';
+        time3.style.backgroundColor = 'white';
+        time4.style.backgroundColor = 'white';
+        time5.style.backgroundColor = 'white';
+        time6.style.backgroundColor = 'white';
+        time7.style.backgroundColor = 'white';
+        time8.style.backgroundColor = 'yellow';
+    }
 }
