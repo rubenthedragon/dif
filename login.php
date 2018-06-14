@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Login</title>
     <link rel="stylesheet" type="text/css" media="screen" href="mainv2.css" />
-    <script src="main.js"></script>
+    <script src="slideshow.js"></script>
 </head>
 <body>
     <div class="mid">
-        <div class="logo"></div>      
+        <div class="logo"><img name="slide" width="300" height="200"></div>     
         <div class="round">
             <div class="formbox">
                 <table>
