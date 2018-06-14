@@ -23,7 +23,7 @@ $password = filter_var($password, FILTER_SANITIZE_STRING);
 $query = $conn->prepare("SELECT * FROM `gebruiker` WHERE `email` = :email");
 $query->execute(array('email' => $username));
 
-$count = $query->fetch();
+$data = $query->fetch();
 /* //zonder hash//
 if ($count == "1"){
 header('Location: plattegrondv3.php?username='+$username+'&'+$password); // LOGIN SCRIPT  ,,, ga naar ... pagina
@@ -32,7 +32,7 @@ echo "Gebruikersnaam is onjuist/wachtwoord combinatie is verkeerd";
 }
 */
 //met hash BCRYPT
-if(password_verify($password, $count['wachtwoord'])){
+if(password_verify($password, $data['wachtwoord'])){
 	header("Location: plattegrondv3.php?username=$username#");
 } else {
 echo "Gebruikersnaam is onjuist/wachtwoord combinatie is verkeerd";

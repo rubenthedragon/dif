@@ -206,8 +206,8 @@ ul li:hover ul li {
 /*WachtwoordVergeten*/
 #container3 {
 	position: absolute;
-	height: 65%; 
-	width: 50%;
+	height: 460px; 
+	width: 702px;
 	margin-top: 6%;
 	margin-bottom: 12.5%;
 	margin-left: 25%;
@@ -215,12 +215,12 @@ ul li:hover ul li {
 	border-radius: 5%;
 	background: white;
 	min-width:410px;
-	background-image: url("https://www.kisspng.com/png-coconut-milk-leaf-euclidean-vector-vector-texture-390568/preview.html");
+	background-image: url("afbeelding.png");
 }
 
 #box {
 	position: absolute;
-	margin-left:35%;
+	margin-left:25%;
 	margin-top:15%;
 	margin-right:3%;
 	min-width:400px;
@@ -230,6 +230,7 @@ ul li:hover ul li {
 	font-size: 30px;
 	border-spacing: 0px;
 	padding-bottom: 0px;
+	margin-top: 10px;
 }
 
 @media screen and (max-width: 1300px) {

@@ -19,7 +19,7 @@
                         </tr>
                         <tr>
                             <td><input type="submit" value="Login" name="submit"></td>
-                            <td><a href="plattegrondv3.html">Wachtwoord vergeten</a></td>
+                            <td><a href="WachtwoordVergeten.php">Wachtwoord vergeten</a></td>
                         </tr>
                         <tr>
                             <td><a href="Registratie.php">Aanmelden</a></td>

@@ -7,13 +7,16 @@
 <body>
 	<div id = "container3">
 		<div id = "box">
-			<form method="post" action="">
+			<form method="post" action="WachtwoordVergetenCode.php">
 				<table id= "table2">
 					<tr>
-						<dif id= "mail"><td><h3>Voer je e-mail in: </h3></td></dif>
+						<dif id= "mail"><td><B>Voer je e-mail in: </B></td></dif>
 					</tr>		
 					<tr>	
-						<div id= "email"><td><input type="text" placeholder="E-mail: " name="email" size="35"></td></div>
+						<div id= "email"><td><input type="text" placeholder="E-mail: " name="email" size="35" required></td></div>
+					</tr>
+					<tr>	
+						<div id= "stuur"><td><input type="submit" value="Stuur" name="submit"></td></div>
 					</tr>
 				</table>
 			</form>
