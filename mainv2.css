@@ -163,6 +163,26 @@ body {
     margin-top:20px;
 }
 
+.datebutton{
+    position: absolute;
+    margin-left:100px;
+    margin-top:65px;
+    height:20px;
+    width:80px;
+    border-style:solid;
+    border-width: 2px;
+    text-align: center;
+}
+
+.datebutton:hover{
+    background-color:yellow;
+}
+
+.datebuttontext{
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
 .roomdetailstable {
     margin-top:70px;
     border-collapse: collapse;
@@ -265,4 +285,8 @@ body {
 #reserveerbtn{
     margin-top:410px;
     margin-left:105px;
+}
+
+#timebuttons{
+    display:none;
 }

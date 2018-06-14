@@ -72,6 +72,104 @@ function showfloor(nr)
 
 var request = new XMLHttpRequest();
 
+function showtimezajax(){
+    var datebox = document.getElementById("datum");
+    var datetext = datebox.value;
+    var namebox = document.getElementById("roomname");
+    var nametext = namebox.textContent;
+
+    var timebuttons = document.getElementById("timebuttons");
+    timebuttons.style.display = 'initial';
+
+    request.onreadystatechange = handleTimezAjax;
+
+    request.open('GET', 'gettimes.php?date='+datetext+'&room='+nametext, true);
+    request.send();
+}
+
+function handleTimezAjax()
+{
+    if(request.readyState === XMLHttpRequest.DONE)
+    {
+        if(request.status === 200)
+        {
+            var time1 = document.getElementById('time1');
+            var time2 = document.getElementById('time2');
+            var time3 = document.getElementById('time3');
+            var time4 = document.getElementById('time4');
+            var time5 = document.getElementById('time5');
+            var time6 = document.getElementById('time6');
+            var time7 = document.getElementById('time7');
+            var time8 = document.getElementById('time8');
+
+            time1.style.backgroundColor = 'white';
+            time1.onclick = "timeonclick(1)";
+            time2.style.backgroundColor = 'white';
+            time2.onclick = "timeonclick(2)";
+            time3.style.backgroundColor = 'white';
+            time3.onclick = "timeonclick(3)";
+            time4.style.backgroundColor = 'white';
+            time4.onclick = "timeonclick(4)";
+            time5.style.backgroundColor = 'white';
+            time5.onclick = "timeonclick(5)";
+            time6.style.backgroundColor = 'white';
+            time6.onclick = "timeonclick(6)";
+            time7.style.backgroundColor = 'white';
+            time7.onclick = "timeonclick(7)";
+            time8.style.backgroundColor = 'white';
+            time8.onclick = "timeonclick(8)";
+
+            var result = request.responseText;
+            var resultarray = result.split(",");
+            resultarray.forEach(function(element) 
+            {
+                if(element == "9:00-10:00")
+                {
+                    time1.style.backgroundColor = 'red';
+                    time1.onclick = "";
+                }
+                if(element == "10:00-11:00")
+                {
+                    time2.style.backgroundColor = 'red';
+                    time2.onclick = "";
+                }
+                if(element == "11:00-12:00")
+                {
+                    time3.style.backgroundColor = 'red';
+                    time3.onclick = "";
+                }
+                if(element == "12:00-13:00")
+                {
+                    time4.style.backgroundColor = 'red';
+                    time4.onclick = "";
+                }
+                if(element == "13:00-14:00")
+                {
+                    time5.style.backgroundColor = 'red';
+                    time5.onclick = "";
+                }
+                if(element == "14:00-15:00")
+                {
+                    time6.style.backgroundColor = 'red';
+                    time6.onclick = "";
+                }
+                if(element == "15:00-16:00")
+                {
+                    time7.style.backgroundColor = 'red';
+                    time7.onclick = "";
+                }
+                if(element == "16:00-17:00")
+                {
+                    time8.style.backgroundColor = 'red';
+                    time8.onclick = "";
+                }
+            });
+        }
+        else{}       
+    }
+    else{}
+}
+
 function reserveajax(package)
 {
     request.onreadystatechange = handleReserveAjax;
@@ -86,7 +184,6 @@ function handleReserveAjax()
     {
         if(request.status === 200)
         {
-            var result = request.responseText;
             console.log(request);
         }
         else{}       
