@@ -1,6 +1,5 @@
 <?php
     require 'databaseconnectie.php';
-    require 'room.php';
     $id = $_GET["roomname"];
 
     if($_GET["roomname"])

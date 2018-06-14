@@ -15,7 +15,7 @@
                             <td class="detailtable">Stoelen</td>
                             <td class="detailtable">Tafels</td>
                             <td class="detailtable">Stopcontacten</td>
-                            <td class="detailtable">Beamer</td>
+                            <td class="detailtable"><img src="Beamer.png"></td>
                         </tr>
                         <tr class="detailtable">
                             <td class="detailtable" id="stoelData"></td>
@@ -25,17 +25,20 @@
                         </tr>
                     </table>
                 </div>
-                <p class="datumtext" id="datumtext">dd-mm-yyyy</p>
+                <p class="datumtext" id="datumtext">yyyy-mm-dd</p>
                 <input class="datum" id="datum" type="date">
-                <dif class="timebutton" id="time1" type="button" onclick="timeonclick(1)"><p>9:00 - 10:00</p></dif>
-                <dif class="timebutton" id="time2" type="button" onclick="timeonclick(2)"><p>10:00 - 11:00</p></dif>
-                <dif class="timebutton" id="time3" type="button" onclick="timeonclick(3)"><p>11:00 - 12:00</p></dif>
-                <dif class="timebutton" id="time4" type="button" onclick="timeonclick(4)"><p>12:00 - 13:00</p></dif>
-                <dif class="timebutton" id="time5" type="button" onclick="timeonclick(5)"><p>13:00 - 14:00</p></dif>
-                <dif class="timebutton" id="time6" type="button" onclick="timeonclick(6)"><p>14:00 - 15:00</p></dif>
-                <dif class="timebutton" id="time7" type="button" onclick="timeonclick(7)"><p>15:00 - 16:00</p></dif>
-                <dif class="timebutton" id="time8" type="button" onclick="timeonclick(8)"><p>16:00 - 17:00</p></dif>
-                <dif class="timebutton" id="reserveerbtn" type="button" onclick="reserve()"><p>reserveer</p></dif>
+                <div class="datebutton" type="button" onclick="showtimezajax()"><p class="datebuttontext">Selecteer</p></div>
+                <div id="timebuttons">
+                    <dif class="timebutton" id="time1" type="button" onclick="timeonclick(1)"><p>9:00 - 10:00</p></dif>
+                    <dif class="timebutton" id="time2" type="button" onclick="timeonclick(2)"><p>10:00 - 11:00</p></dif>
+                    <dif class="timebutton" id="time3" type="button" onclick="timeonclick(3)"><p>11:00 - 12:00</p></dif>
+                    <dif class="timebutton" id="time4" type="button" onclick="timeonclick(4)"><p>12:00 - 13:00</p></dif>
+                    <dif class="timebutton" id="time5" type="button" onclick="timeonclick(5)"><p>13:00 - 14:00</p></dif>
+                    <dif class="timebutton" id="time6" type="button" onclick="timeonclick(6)"><p>14:00 - 15:00</p></dif>
+                    <dif class="timebutton" id="time7" type="button" onclick="timeonclick(7)"><p>15:00 - 16:00</p></dif>
+                    <dif class="timebutton" id="time8" type="button" onclick="timeonclick(8)"><p>16:00 - 17:00</p></dif>
+                    <dif class="timebutton" id="reserveerbtn" type="button" onclick="reserve()"><p>reserveer</p></dif>
+                </div>
             </div>
             <div class="pg" id="floor1p">
                 <div class="ruimte" id="ruimte1" id="DIF1.01" type="button" onclick="roomajax('DIF1.01')"></div>
