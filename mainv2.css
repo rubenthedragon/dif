@@ -151,8 +151,20 @@ body {
 
 }
 
+.datum{
+    position: absolute;
+    margin-left: 70px;
+    margin-top: 40px;
+}
+
+.datumtext{
+    position: absolute;
+    margin-left: 90px;
+    margin-top:20px;
+}
+
 .roomdetailstable {
-    margin-top:100px;
+    margin-top:70px;
     border-collapse: collapse;
     height:50px;
 }
@@ -165,13 +177,13 @@ body {
 .occupied {
     position:absolute;
     margin-left:185px;
-    margin-top:70px;
+    margin-top:40px;
 }
 
 .roomname{
     position: absolute;
     margin-left:35px;
-    margin-top:70px;
+    margin-top:40px;
 }
 
 .ruimte{
@@ -217,40 +229,40 @@ body {
 
 #time1{
     margin-left: 40px;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 #time2{
     margin-left: 170px;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 #time3{
     margin-left:40px;
-    margin-top:150px;
+    margin-top:170px;
 }
 #time4{
     margin-left:170px;
-    margin-top:150px;
+    margin-top:170px;
 }
 #time5{
     margin-left:40px;
-    margin-top:250px;
+    margin-top:240px;
 }
 #time6{
     margin-left:170px;
-    margin-top:250px;
+    margin-top:240px;
 }
 #time7{
     margin-left:40px;
-    margin-top:350px;
+    margin-top:310px;
 }
 
 #time8{
     margin-left:170px;
-    margin-top:350px;
+    margin-top:310px;
 }
 
 #reserveerbtn{
-    margin-top:435px;
+    margin-top:410px;
     margin-left:105px;
 }
