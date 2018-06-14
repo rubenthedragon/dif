@@ -82,6 +82,16 @@ body {
     margin-top:160px;
 }
 
+#uitloggen {
+    margin-top: 230px;
+    text-align: center;
+}
+
+#adminpage {
+    margin-top: 300px;
+    text-align: center;
+}
+
 .floorsquare{
     width:30px;
     height: 10px;
@@ -185,13 +195,18 @@ body {
 
 .roomdetailstable {
     margin-top:70px;
-    border-collapse: collapse;
     height:50px;
+    border-style:solid;
+    border-width:2px;
+    border-collapse: collapse;
 }
 
-.roomdetailstable, detailstable {
+.detailtable {
     border-style: solid;
     border-width: 2px;
+    width:50px;
+    height:50px;
+    text-align: center;
 }
 
 .occupied {
@@ -283,7 +298,7 @@ body {
 }
 
 #reserveerbtn{
-    margin-top:410px;
+    margin-top:390px;
     margin-left:105px;
 }
 
