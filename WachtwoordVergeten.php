@@ -8,12 +8,12 @@
 	<div id = "container3">
 		<div id = "box">
 			<form method="post" action="">
-				<table id= "table1">
+				<table id= "table2">
 					<tr>
-						<td><h3>Voer je e-mail in: <h3></td>
+						<dif id= "mail"><td><h3>Voer je e-mail in: </h3></td></dif>
 					</tr>		
 					<tr>	
-						<td><input type="text" placeholder="E-mail: " name="email" size="35"></td>	
+						<div id= "email"><td><input type="text" placeholder="E-mail: " name="email" size="35"></td></div>
 					</tr>
 				</table>
 			</form>

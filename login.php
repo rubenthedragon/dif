@@ -12,10 +12,10 @@
                 <table>
                     <form class="loginf" method="post" action="loginCode.php">
                         <tr>
-                            <td>Gebruikersnaam: </td> <td><input type="text" name="email" placeholder="Gebruikersnaam"></td>
+                            <td>E-mail: </td> <td><input type="text" name="email" placeholder="E-mail*" required></td>
                         </tr>
                         <tr>
-                            <td>Wachtwoord:</td> <td><input type="password" name="password" placeholder="Wachtwoord"></td>
+                            <td>Wachtwoord:</td> <td><input type="password" name="password" placeholder="Wachtwoord*" required></td>
                         </tr>
                         <tr>
                             <td><input type="submit" value="Login" name="submit"></td>

@@ -46,14 +46,19 @@ body {
 #MeldjenuaanText {
 	position: absolute;
 	font-size: 200%;
-	margin-left: 20px;
+	margin-left: 1px;
 	margin-top: 80px;
 	height:30px;
 }
 
 #register {
 	position: absolute;
-	margin-top:100px;
+	margin-top:140px;
+}
+
+#table1 {
+	border-spacing: 15px;
+	margin-left: -14px;
 }
 
 #checkbox {
@@ -64,15 +69,10 @@ body {
 	height: 43%;
 }
 
-
 /* Extra small devices (phones, 600px and down) */
 @media screen and (max-width: 1300px) {
 	#afbeeldingDIF{
 		display:none;
-	}
-
-	#registratieform{
-		margin-left:20%;
 	}
 }
 
@@ -215,8 +215,31 @@ ul li:hover ul li {
 	border-radius: 5%;
 	background: white;
 	min-width:410px;
+	background-image: url("https://www.kisspng.com/png-coconut-milk-leaf-euclidean-vector-vector-texture-390568/preview.html");
 }
 
 #box {
-	
+	position: absolute;
+	margin-left:35%;
+	margin-top:15%;
+	margin-right:3%;
+	min-width:400px;
+}
+
+#table2 {
+	font-size: 30px;
+	border-spacing: 0px;
+	padding-bottom: 0px;
+}
+
+@media screen and (max-width: 1300px) {
+	#table2{
+		margin-left:-10%;
+	}
+}
+
+@media screen and (max-width: 900px){
+	#table2{
+		margin-left:-20%;
+	}
 }
