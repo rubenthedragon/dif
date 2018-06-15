@@ -78,6 +78,8 @@ function showtimezajax(){
     var namebox = document.getElementById("roomname");
     var nametext = namebox.textContent;
 
+    var timebuttons = document.getElementById("timebuttons");
+    timebuttons.style.display = 'initial';
     request.onreadystatechange = handleTimezAjax;
 
     request.open('GET', 'gettimes.php?date='+datetext+'&room='+nametext, true);
@@ -92,8 +94,6 @@ function handleTimezAjax()
         {
             if(request.responseText.length != "")
             {
-                var timebuttons = document.getElementById("timebuttons");
-                timebuttons.style.display = 'initial';
                 var time1 = document.getElementById('time1');
                 var time2 = document.getElementById('time2');
                 var time3 = document.getElementById('time3');
@@ -165,11 +165,6 @@ function handleTimezAjax()
                         time8.onclick = "";
                     }
                 });
-            }
-            else
-            {
-                var timebuttons = document.getElementById("timebuttons");
-                timebuttons.style.display = 'none';
             }
 
         }
