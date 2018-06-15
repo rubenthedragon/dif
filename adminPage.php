@@ -14,7 +14,7 @@ $tijden = array("9:00-10:00","10:00-11:00","11:00-12:00","12:00-13:00","13:00-14
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Admin Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="mineStyle.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="adminStyle.css" />
     <script src="adminPage.js"></script>
 </head>
     <body>

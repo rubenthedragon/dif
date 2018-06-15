@@ -28,19 +28,19 @@ body {
     overflow-x: auto;
 }
 
+#ruimteTable{
+    width: 50%;
+}
+
 #gebruikerInfoTable{
-    margin-left: 150px;
+    margin-left: 10%;
     display: inline;
     position: absolute;
 }
 
 table, td, th{
     border: 3px solid grey;
-    margin-left: 75px;
-}
-
-.gId{
-    width: 50px;
+    margin-left: 10%;
 }
 
 .adminbox{
@@ -51,12 +51,4 @@ table, td, th{
 .adminbox:hover{
     transition: 0.3s;
     background-color: yellow;
-}
-
-#editbox{
-    margin-top: 200px;
-}
-
-#removebox{
-    
 }
