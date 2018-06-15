@@ -34,7 +34,7 @@ if(isset($_POST['Register']))
     	if($results)
     	{
 
-    		echo "Welkom: " ,$name;
+    		header('Location: login.html');
 
     	}
     	else {

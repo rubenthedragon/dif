@@ -33,7 +33,7 @@ $data = $query->fetch();
 //met hash BCRYPT, checkt of wachtwoord overeenkomt met de gegevens uit de database
 if(password_verify($password, $data['wachtwoord'])){
 	//ga naar pagina plattegrondv3
-	header("Location: plattegrondv3.php?username=$username");
+	header("Location: plattegrondv3.html?username=$username");
 } else {
 //geeft weer dat de gebruikersnaam onjuist is of de wachtwoord combinatie verkeerd is
 echo "Gebruikersnaam is onjuist/wachtwoord combinatie is verkeerd";
