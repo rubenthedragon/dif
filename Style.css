@@ -70,141 +70,18 @@ body {
 	height: 43%;
 }
 
-/* Extra small devices (phones, 600px and down) */
+/*media query om de site responsive te maken (max-width: 1300px)*/
 @media screen and (max-width: 1300px) {
 	#afbeeldingDIF{
 		display:none;
 	}
 }
 
+/*media query om de site responsive te maken (max-width: 900px)*/
 @media screen and (max-width: 900px){
 	#registratieform{
 		margin-left:5%;
 	}
-}
-
-/*RESERVEREN*/
-
-#container2 {
-	position: absolute;
-	margin: 50px;
-	height: calc(100% - 100px);
-	width: calc(100% - 100px);
-	background: white;
-}
-
-.column {
-    float: left;
-    width: 150px;
-    padding:10px;
-    height: 50px; 
-    border: 1px solid;
-	margin-right: 10px;
-	text-align: center;
-	transition-duration: 0.4s;
-	background-color: white;
-	opacity: 1;
-}
-
-.column:hover {
-    transition: 0.3s;
-    background-color: yellow;
-}
-
-.row0 {
-	margin-top: 15px;
-	margin-left: 125px;
-	margin-right: 20px;
-	position: absolute;
-}
-
-.row1 {
-	margin-top: 100px;
-	margin-left: 50px;
-	margin-right: 20px;
-}
-
-.row2 {
-	margin-top: 200px;
-	margin-left: 50px;
-	margin-right: 20px;
-}
-
-.row3 {
-	margin-top: 300px;
-	margin-left: 50px;
-	margin-right: 20px;
-}
-
-.row4 {
-	margin-top: 400px;
-	margin-left: 50px;
-	margin-right: 20px;
-}
-
-.row5 {
-	margin-top: 500px;
-	margin-left: 120px;
-	margin-right: 20px;
-}
-
-
-#ReserverenBox {
-	margin-top: 20px;
-	margin-left: 20px;
-	position: absolute;
-	border: 1px solid;
-	height: 600px;
-	width: 420px;
-	position:relative;
-	animation:animateleft 0.4s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1};
-}
-
-/*Dropdown menu*/
-ul {
-	margin: 0px;
-	padding: 0px;
-	list-style: none;
-	float: right;
-}
-
-ul li {
-	float: left;
-	width: 200px;
-	height: 40px;
-	background-color: black;
-	opacity: .8;
-	line-height: 40px;
-	text-align: center;
-	font-size: 20px; 
-}
-
-ul li a {
-	text-decoration: none;
-	color: white;
-	display: block;
-}
-
-/*als er met de muis overheen wordt gegaan:*/
-ul li a:hover {
-	background-color: purple;
-}
-
-ul li ul li {
-	display: none;
-}
-
-/*als er met de muis overheen wordt gegaan:*/
-ul li:hover ul li {
-	display: block;
-}
-
-/*media query om de site responsive te maken (max-width: 600px)*/
-@media screen and (max-width: 600px) {
-    #ReserverenBox {
-        width: 100%;
-
-    }
 }
 
 /*WachtwoordVergeten*/

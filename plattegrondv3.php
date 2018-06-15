@@ -11,12 +11,14 @@
                 <div class="roomdetails">
                     <table class="roomdetailstable">
                         <tr class="detailtable">
+                            <!--voorzieningen van een ruimte-->
                             <td class="detailtable"><img src="Chair.png"></td>
                             <td class="detailtable"><img src="Table.png"></td>
                             <td class="detailtable"><img src="PowerOutlet.png"></td>
                             <td class="detailtable"><img src="Beamer.png"></td>
                         </tr>
                         <tr class="detailtable">
+                            <!--data van de voorzieningen van een ruimte-->
                             <td class="detailtable" id="stoelData"></td>
                             <td class="detailtable" id="tafelData"></td>
                             <td class="detailtable" id="stopData"></td>
@@ -26,8 +28,10 @@
                 </div>
                 <p class="datumtext" id="datumtext">yyyy-mm-dd</p>
                 <input class="datum" id="datum" type="date">
+                <!--maakt een kalender aan met onclick verwijzing naar showtimezajax-->
                 <div class="datebutton" type="button" onclick="showtimezajax()"><p class="datebuttontext">Selecteer</p></div>
                 <div id="timebuttons">
+                    <!--Buttons met onclick functie en aparte id-->
                     <dif class="timebutton" id="time1" type="button" onclick="timeonclick(1)"><p>9:00 - 10:00</p></dif>
                     <dif class="timebutton" id="time2" type="button" onclick="timeonclick(2)"><p>10:00 - 11:00</p></dif>
                     <dif class="timebutton" id="time3" type="button" onclick="timeonclick(3)"><p>11:00 - 12:00</p></dif>
@@ -39,12 +43,15 @@
                     <dif class="timebutton" id="reserveerbtn" type="button" onclick="reserve()"><p>reserveer</p></dif>
                 </div>
             </div>
+            <!--etage 1-->
             <div class="pg" id="floor1p">
                 <div class="ruimte" id="ruimte1" id="DIF1.01" type="button" onclick="roomajax('DIF1.01')"></div>
             </div>
+            <!--etage 2-->
             <div class="pg" id="floor2p">
                 <div class="ruimte" id="ruimte2" id="DIF2.01" type="button" onclick="roomajax('DIF2.01')"></div>                     
             </div>
+            <!--etage 3-->
             <div class="pg" id="floor3p">
                 <div class="ruimte" id="ruimte3" id="DIF3.01" type="button" onclick="roomajax('DIF3.01')"></div>          
             </div>
@@ -81,10 +88,12 @@
                 </div>
             </div>        
             
+            <!--uitloggen vakje met onclick verwijzing naar het login document-->
             <div class="floorbox" id="uitloggen" onclick="location.href='login.php'">
                 <p>Uitloggen</p>
             </div>
             
+            <!--admin knop met verwijzing naar de admin pagina-->
             <div class="floorbox" id="adminpage" onclick="location.href='login.php'">
                 <p>Administratie</p>
             </div>
