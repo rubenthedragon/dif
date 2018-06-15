@@ -28,10 +28,6 @@ body {
     overflow-x: auto;
 }
 
-#ruimteTable{
-    width: 990px;
-}
-
 #gebruikerInfoTable{
     margin-left: 150px;
     display: inline;
