@@ -132,39 +132,6 @@ function handleTimezAjax()
     {
         if(request.status === 200)
         {
-<<<<<<< HEAD
-=======
-            if(request.responseText.length != "")
-            {   
-                //variabelen
-                var time1 = document.getElementById('time1');
-                var time2 = document.getElementById('time2');
-                var time3 = document.getElementById('time3');
-                var time4 = document.getElementById('time4');
-                var time5 = document.getElementById('time5');
-                var time6 = document.getElementById('time6');
-                var time7 = document.getElementById('time7');
-                var time8 = document.getElementById('time8');
-               
-                //verander onclick en achtergrondkleur
-                time1.style.backgroundColor = 'white';
-                time1.onclick = "timeonclick(1)";
-                time2.style.backgroundColor = 'white';
-                time2.onclick = "timeonclick(2)";
-                time3.style.backgroundColor = 'white';
-                time3.onclick = "timeonclick(3)";
-                time4.style.backgroundColor = 'white';
-                time4.onclick = "timeonclick(4)";
-                time5.style.backgroundColor = 'white';
-                time5.onclick = "timeonclick(5)";
-                time6.style.backgroundColor = 'white';
-                time6.onclick = "timeonclick(6)";
-                time7.style.backgroundColor = 'white';
-                time7.onclick = "timeonclick(7)";
-                time8.style.backgroundColor = 'white';
-                time8.onclick = "timeonclick(8)";
-    
->>>>>>> 4648d0409c3161f687be787400a9ed947cf6283a
                 var result = request.responseText;
                 var resultarray = result.split(",");
                 resultarray.forEach(function(element) 
