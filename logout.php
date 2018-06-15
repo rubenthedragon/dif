@@ -3,7 +3,8 @@
 
 session_start();
 session_destroy();
-header('Location: login.php');
+//verwijs naar login document
+header('Location: login.html');
 
 
  ?>

@@ -1,9 +1,9 @@
 
-	var i = 0; // Start point
-	var afbeelding = [];
-	var tijd = 2000;
+	var i = 0; //begin afbeelding
+	var afbeelding = []; //afbeelding array
+	var tijd = 2000; //aantal miliseconden per afbeelding
 
-	// Image List
+	//Afbeeldingen
 	afbeelding[0] = 'logo.jpg';
 	afbeelding[1] = 'logo02.jpg';
 	afbeelding[2] = 'logo3.jpg';
@@ -11,7 +11,7 @@
 	afbeelding[4] = 'logo5.jpg';
 
 
-	// Change Image
+	//Verander de afbeelding
 	function veranderAfb(){
 		document.slide.src = afbeelding[i];
 
@@ -23,6 +23,6 @@
 
 		setTimeout("veranderAfb()", tijd);
 	}
-
+	//als scherm geladen is begin gelijk met de slideshow
 	window.onload = veranderAfb;
 
