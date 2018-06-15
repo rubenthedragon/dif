@@ -85,7 +85,7 @@
                 <p>Uitloggen</p>
             </div>
             
-            <div class="floorbox" id="adminpage" onclick="location.href='login.php'">
+            <div class="floorbox" id="adminpage" onclick="location.href='adminPage.php'">
                 <p>Administratie</p>
             </div>
         </div>

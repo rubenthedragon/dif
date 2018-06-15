@@ -104,21 +104,15 @@ function showtimezajax(){
     var time8 = document.getElementById('time8');
 
     time1.style.backgroundColor = 'white';
-    time1.onclick = "timeonclick(1)";
     time2.style.backgroundColor = 'white';
-    time2.onclick = "timeonclick(2)";
     time3.style.backgroundColor = 'white';
-    time3.onclick = "timeonclick(3)";
     time4.style.backgroundColor = 'white';
-    time4.onclick = "timeonclick(4)";
     time5.style.backgroundColor = 'white';
-    time5.onclick = "timeonclick(5)";
     time6.style.backgroundColor = 'white';
-    time6.onclick = "timeonclick(6)";
     time7.style.backgroundColor = 'white';
-    time7.onclick = "timeonclick(7)";
     time8.style.backgroundColor = 'white';
-    time8.onclick = "timeonclick(8)";
+
+
     
     request.onreadystatechange = handleTimezAjax;
 
@@ -136,6 +130,7 @@ function handleTimezAjax()
                 var resultarray = result.split(",");
                 resultarray.forEach(function(element) 
                 {   
+                    
                     //als element "tijd" is, verander de achtergrondkleur 
                     if(element == "9:00-10:00")
                     {
@@ -255,7 +250,7 @@ function timeonclick(time){
     var time8 = document.getElementById('time8');
 
     //als time 1 is verander achtergrond kleur
-    if(time === 1){
+    if(time == 1){
         time1.style.backgroundColor = 'yellow';
         time2.style.backgroundColor = 'white';
         time3.style.backgroundColor = 'white';
@@ -267,7 +262,7 @@ function timeonclick(time){
     }
 
     //als time 2 is verander achtergrond kleur
-    if(time === 2){
+    if(time == 2){
         time1.style.backgroundColor = 'white';
         time2.style.backgroundColor = 'yellow';
         time3.style.backgroundColor = 'white';
@@ -279,7 +274,7 @@ function timeonclick(time){
     }
 
     //als time 3 is verander achtergrond kleur
-    if(time === 3){
+    if(time == 3){
         time1.style.backgroundColor = 'white';
         time2.style.backgroundColor = 'white';
         time3.style.backgroundColor = 'yellow';
@@ -291,7 +286,7 @@ function timeonclick(time){
     }
 
     //als time 4 is verander achtergrond kleur
-    if(time === 4){
+    if(time == 4){
         time1.style.backgroundColor = 'white';
         time2.style.backgroundColor = 'white';
         time3.style.backgroundColor = 'white';
@@ -303,7 +298,7 @@ function timeonclick(time){
     }
 
     //als time 5 is verander achtergrond kleur
-    if(time === 5){
+    if(time == 5){
         time1.style.backgroundColor = 'white';
         time2.style.backgroundColor = 'white';
         time3.style.backgroundColor = 'white';
@@ -315,7 +310,7 @@ function timeonclick(time){
     }
 
     //als time 6 is verander achtergrond kleur
-    if(time === 6){
+    if(time == 6){
         time1.style.backgroundColor = 'white';
         time2.style.backgroundColor = 'white';
         time3.style.backgroundColor = 'white';
@@ -327,7 +322,7 @@ function timeonclick(time){
     }
 
     //als time 7 is verander achtergrond kleur
-    if(time === 7){
+    if(time == 7){
         time1.style.backgroundColor = 'white';
         time2.style.backgroundColor = 'white';
         time3.style.backgroundColor = 'white';
@@ -339,7 +334,7 @@ function timeonclick(time){
     }
 
     //als time 8 is verander achtergrond kleur
-    if(time === 8){
+    if(time == 8){
         time1.style.backgroundColor = 'white';
         time2.style.backgroundColor = 'white';
         time3.style.backgroundColor = 'white';
