@@ -1,0 +1,66 @@
+body {
+    background-color: yellow;
+}
+
+.content{
+    position: absolute;
+    width: calc(100% - 100px);
+    height:calc(100% - 100px);
+    margin-top:50px;
+    margin-left:50px;
+    margin-right:50px;
+    margin-bottom:50px;
+    background-color: white;
+
+}
+
+.detailtablehead {
+    background-color: lightgray;
+    margin: 12px 12px 12px 12px;
+    padding: 12px 12px 12px 12px;
+}
+.detailstable {
+    border-style: solid;
+    border-spacing: 10px;
+    border-width: 3px;
+    float: left;
+    overflow-y:auto;
+    overflow-x: auto;
+}
+
+#ruimteTable{
+    width: 990px;
+}
+
+#gebruikerInfoTable{
+    margin-left: 150px;
+    display: inline;
+    position: absolute;
+}
+
+table, td, th{
+    border: 3px solid grey;
+    margin-left: 75px;
+}
+
+.gId{
+    width: 50px;
+}
+
+.adminbox{
+    border-width:3px;
+    border-color: gray;
+}
+
+.adminbox:hover{
+    transition: 0.3s;
+    background-color: yellow;
+}
+
+#editbox{
+    margin-top: 200px;
+}
+
+#removebox{
+    
+}
