@@ -111,8 +111,6 @@ function showtimezajax(){
     time6.style.backgroundColor = 'white';
     time7.style.backgroundColor = 'white';
     time8.style.backgroundColor = 'white';
-
-
     
     request.onreadystatechange = handleTimezAjax;
 
@@ -135,42 +133,34 @@ function handleTimezAjax()
                     if(element == "9:00-10:00")
                     {
                         time1.style.backgroundColor = 'red';
-                        time1.onclick = "";
                     }
                     if(element == "10:00-11:00")
                     {
                         time2.style.backgroundColor = 'red';
-                        time2.onclick = "";
                     }
                     if(element == "11:00-12:00")
                     {
                         time3.style.backgroundColor = 'red';
-                        time3.onclick = "";
                     }
                     if(element == "12:00-13:00")
                     {
                         time4.style.backgroundColor = 'red';
-                        time4.onclick = "";
                     }
                     if(element == "13:00-14:00")
                     {
                         time5.style.backgroundColor = 'red';
-                        time5.onclick = "";
                     }
                     if(element == "14:00-15:00")
                     {
                         time6.style.backgroundColor = 'red';
-                        time6.onclick = "";
                     }
                     if(element == "15:00-16:00")
                     {
                         time7.style.backgroundColor = 'red';
-                        time7.onclick = "";
                     }
                     if(element == "16:00-17:00")
                     {
                         time8.style.backgroundColor = 'red';
-                        time8.onclick = "";
                     }
                 });
 
@@ -263,7 +253,7 @@ function timeonclick(time){
 
     //als time 2 is verander achtergrond kleur
     if(time == 2){
-        time1.style.backgroundColor = 'white';
+
         time2.style.backgroundColor = 'yellow';
         time3.style.backgroundColor = 'white';
         time4.style.backgroundColor = 'white';
