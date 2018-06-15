@@ -185,7 +185,7 @@ function reserveajax(package)
     request.onreadystatechange = handleReserveAjax;
 
     request.open('GET', 'reserveer.php'+package, true);
-    request.send();
+    request.send(); 
 }
 
 function handleReserveAjax()
