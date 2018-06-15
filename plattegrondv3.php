@@ -25,7 +25,7 @@
                     </table>
                 </div>
                 <p class="datumtext" id="datumtext">yyyy-mm-dd</p>
-                <input class="datum" id="datum" type="date">
+                <input class="datum" id="datum">
                 <div class="datebutton" type="button" onclick="showtimezajax()"><p class="datebuttontext">Selecteer</p></div>
                 <div id="timebuttons">
                     <dif class="timebutton" id="time1" type="button" onclick="timeonclick(1)"><p>9:00 - 10:00</p></dif>
