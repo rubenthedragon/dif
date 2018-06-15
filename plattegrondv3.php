@@ -95,6 +95,7 @@
 
             function sendres()
             {
+                //variabelen
                 var user = getQueryVariable("username");
                 var datebox = document.getElementById("datum");
                 var datetext = datebox.value;
@@ -109,6 +110,7 @@
                 var time7 = document.getElementById('time7');
                 var time8 = document.getElementById('time8');
                 
+                //verander kleur als er op geklikt is
                 if(time1.style.backgroundColor == "yellow"){
                     time = "9:00-10:00"
                 }

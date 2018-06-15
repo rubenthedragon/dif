@@ -16,12 +16,7 @@ if(isset($_POST['submit']))
 
 	if ($count == "1"){
 		/*
-	$name = "alysia";
-	$to = "alysiagode@ziggo.nl";
-	$subject = "Test";
-	$body = "TestMaillll";
-	mail($to, $subject, $body);
-	*/
+
 
 	header('Location: login.php'); // LOGIN SCRIPT  ,,, ga naar ... 
 	} else {

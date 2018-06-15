@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!--Verwijst naar het Style document(css)-->
 	<link rel="stylesheet" type="text/css" href="Style.css">
+	<!--titel-->
 	<title>Wachtwoord vergeten</title>
 </head>
 <body>
 	<div id = "container3">
 		<div id = "box">
+			<!-- form methode, actie als er op Stuur gedrukt is-->
 			<form method="post" action="WachtwoordVergetenCode.php">
 				<table id= "table2">
 					<tr>
 						<dif id= "mail"><td><B>Voer je e-mail in: </B></td></dif>
 					</tr>		
-					<tr>	
+					<tr>
+						<!--Maak text box aan met tijdelijke invulling en grootte van de box 35, de tekst invullen is verplicht-->
 						<div id= "email"><td><input type="text" placeholder="E-mail: " name="email" size="35" required></td></div>
 					</tr>
-					<tr>	
+					<tr>
+						<!--Maak button aan-->
 						<div id= "stuur"><td><input type="submit" value="Stuur" name="submit"></td></div>
 					</tr>
 				</table>

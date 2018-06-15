@@ -1,4 +1,5 @@
 body {
+	/*zorgt dat de achtergrond overal geel is*/
 	background: 	yellow;
 }
 
@@ -184,6 +185,7 @@ ul li a {
 	display: block;
 }
 
+/*als er met de muis overheen wordt gegaan:*/
 ul li a:hover {
 	background-color: purple;
 }
@@ -192,10 +194,12 @@ ul li ul li {
 	display: none;
 }
 
+/*als er met de muis overheen wordt gegaan:*/
 ul li:hover ul li {
 	display: block;
 }
 
+/*media query om de site responsive te maken (max-width: 600px)*/
 @media screen and (max-width: 600px) {
     #ReserverenBox {
         width: 100%;
@@ -233,12 +237,14 @@ ul li:hover ul li {
 	margin-top: 10px;
 }
 
+/*media query om de site responsive te maken (max-width: 1300px)*/
 @media screen and (max-width: 1300px) {
 	#table2{
 		margin-left:-10%;
 	}
 }
 
+/*media query om de site responsive te maken (max-width: 900px)*/
 @media screen and (max-width: 900px){
 	#table2{
 		margin-left:-20%;
