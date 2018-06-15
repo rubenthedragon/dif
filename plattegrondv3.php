@@ -8,13 +8,12 @@
         <div class="pgwd">
             <div class="details" id="details">
                 <p class="roomname" id="roomname"></p>
-                <p class="occupied">bezet</p>
                 <div class="roomdetails">
                     <table class="roomdetailstable">
                         <tr class="detailtable">
-                            <td class="detailtable">Stoelen</td>
-                            <td class="detailtable">Tafels</td>
-                            <td class="detailtable">Stopcontacten</td>
+                            <td class="detailtable"><img src="Chair.png"></td>
+                            <td class="detailtable"><img src="Table.png"></td>
+                            <td class="detailtable"><img src="PowerOutlet.png"></td>
                             <td class="detailtable"><img src="Beamer.png"></td>
                         </tr>
                         <tr class="detailtable">
@@ -80,6 +79,14 @@
                 <div class="floornr">
                         <p class="floortext">3</p>
                 </div>
+            </div>        
+            
+            <div class="floorbox" id="uitloggen" onclick="location.href='login.php'">
+                <p>Uitloggen</p>
+            </div>
+            
+            <div class="floorbox" id="adminpage" onclick="location.href='login.php'">
+                <p>Administratie</p>
             </div>
         </div>
     </div>
