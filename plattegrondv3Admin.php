@@ -43,7 +43,7 @@
                     <dif class="timebutton" id="time6" type="button" onclick="timeonclick(6)"><p>14:00 - 15:00</p></dif>
                     <dif class="timebutton" id="time7" type="button" onclick="timeonclick(7)"><p>15:00 - 16:00</p></dif>
                     <dif class="timebutton" id="time8" type="button" onclick="timeonclick(8)"><p>16:00 - 17:00</p></dif>
-                    <dif class="timebutton" id="reserveerbtn" type="button" onclick="reserve()"><p>reserveer</p></dif>
+                    <dif class="timebutton" id="reserveerbtn" type="button" onclick="reserve(), openPopup()"><p>reserveer</p></dif>
                 </div>
             </div>
             <!--etage 1-->
@@ -108,6 +108,26 @@
             <div id = "naam">
                 <h3><?php echo  $_SESSION["username"]; ?></h3>
             </div>
+
+            <div id="popup">
+                <div id="checkMark"><img src="checkMark.png"></div>
+                <div id="succes"><h2>Succesvol gereserveerd!</h2></div>
+                <div id="close_popup" title="Sluiten" onclick="closePopup()"><p>X</p></div>
+            </div>
+
+            <script type="text/javascript">
+                    var popup = document.getElementById("popup")
+
+                    function openPopup()
+                    {
+                        popup.style.display = "block";
+                    }
+
+                    function closePopup()
+                    {
+                        popup.style.display = "none";
+                    }
+            </script>
 
         </div>
     </div>
