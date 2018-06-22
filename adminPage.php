@@ -21,6 +21,7 @@ $tijden = array("9:00-10:00","10:00-11:00","11:00-12:00","12:00-13:00","13:00-14
         <form method="POST" action="administratieTabel.php">
             <div class="content">
                 <div class="ruimtedetails">
+                    <!--reserveringsinformatie-->
                     <table class="detailstable" id="ruimteTable">
                         <tr class="detailtablehead">
                             <th class="detailtablehead" >Ruimte</th>
@@ -74,6 +75,7 @@ $tijden = array("9:00-10:00","10:00-11:00","11:00-12:00","12:00-13:00","13:00-14
                             </td>
                         </tr>
                         <?php endwhile ?>
+                        <!--gebruikersinformatie-->
                     </table>
                     <table class="detailstable" id="gebruikerInfoTable">
                         <tr class="detailtablehead">

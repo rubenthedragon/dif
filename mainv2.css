@@ -304,3 +304,79 @@ body {
 #timebuttons{
     display:none;
 }
+
+#profilePic{
+    margin-top: -55px;
+    margin-left: -150px;
+}
+
+#naam{
+    margin-top: -55px;
+    margin-left: -90px;
+}
+
+#checkMark{
+    margin-left: 150px;
+    margin-top: 10px;;
+}
+
+#succes{
+    margin-left: 75px;
+}
+
+#close_popup{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    border: 2px solid black;
+    text-align: center;    
+    right: 5px;
+    top: 5px;
+}
+
+#close_popup p{
+    margin-top: 5px;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#popup{
+    width: 400px;
+    height: 180px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    border-style:solid;
+    border-width: 3px;
+    margin-top: 150px;
+    margin-left: -800px;
+    display: none;
+}
+
+/*media query om de site responsive te maken (max-width: 1300px)*/
+@media screen and (max-width: 1300px) {
+    .popup{
+        margin-left: -600px;
+    }
+}
+
+/*media query om de site responsive te maken (max-width: 900px)*/
+@media screen and (max-width: 900px){
+    .popup{
+        height: 150px;
+        width: 200px;
+        margin-left:-300px;
+    }
+
+    #checkMark{
+    margin-left: 50px;
+    margin-top: 10px;;
+    }
+
+    #succes{
+        display: none;
+    }
+}
+

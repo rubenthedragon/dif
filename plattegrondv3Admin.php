@@ -1,3 +1,6 @@
+<?php  
+    session_start();
+?>
 <html>
 <head>
     <link rel="stylesheet" type="text/css" media="screen" href="mainv2.css" />
@@ -86,16 +89,25 @@
                 <div class="floornr">
                         <p class="floortext">3</p>
                 </div>
-            </div>  
+            </div>        
             
             <!--uitloggen vakje met onclick verwijzing naar het login document-->
             <div class="floorbox" id="uitloggen" onclick="location.href='login.html'">
                 <p>Uitloggen</p>
             </div>
             
-            <div id= "profilePic">
+            <!--admin knop met verwijzing naar de admin pagina-->
+            <div class="floorbox" id="adminpage" onclick="location.href='adminPage.php'">
+                <p>Administratie</p>
+            </div>
+
+             <div id= "profilePic">
                 <img src="profile.png">
             </div>  
+
+            <div id = "naam">
+                <h3><?php echo  $_SESSION["username"]; ?></h3>
+            </div>
 
         </div>
     </div>

@@ -10,6 +10,7 @@ if(isset($_POST['Register']))
 		$username = $_POST['Gebruikersnaam'];
 		$password = $_POST['Wachtwoord'];
         $name = $_POST['Naam'];
+
         //wachtwoord hash
         $hash = password_hash($password, PASSWORD_BCRYPT, array('cost'=>11));
         //als de wachtwoorden overeen komen
@@ -17,8 +18,8 @@ if(isset($_POST['Register']))
 	 	{
 
         //sql code
-		$sql = "INSERT INTO gebruiker (email, naam, wachtwoord)
-   					 VALUES (:Gebruikersnaam, :Naam, :Wachtwoord)";
+		$sql = "INSERT INTO gebruiker (email, naam, wachtwoord, type)
+   					 VALUES (:Gebruikersnaam, :Naam, :Wachtwoord, 0)";
 
         //bereid de sql code voor
     	$query = $conn->prepare($sql);
@@ -27,6 +28,8 @@ if(isset($_POST['Register']))
     		":Gebruikersnaam" => $username,
 			":Wachtwoord" => $hash,
             ":Naam" => $name
+
+
 		
     	));
         
