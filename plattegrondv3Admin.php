@@ -101,12 +101,12 @@
                 <p>Administratie</p>
             </div>
 
-             <div id= "profilePic">
-                <img src="profile.png">
+             <div id= "profilePic" onclick="openProfilePopup()">
+                <p><img src="profile.png"></p>
             </div>  
 
-            <div id = "naam">
-                <h3><?php echo  $_SESSION["username"]; ?></h3>
+            <div id = "naam" onclick="openProfilePopup()">
+                <p><h3><?php echo  $_SESSION["username"]; ?></h3></p>
             </div>
 
             <div id="popup">
@@ -115,18 +115,41 @@
                 <div id="close_popup" title="Sluiten" onclick="closePopup()"><p>X</p></div>
             </div>
 
+            <div id="profilePopup">
+                <div id="profileAfb"><img src="anonymous.png"></div>
+                <div id="gebruikerAdmin"><h2><?php echo "Admin"; ?></h2></div>
+                <div id="line"></div>
+                <div id="profileEmail"><h2><?php echo  $_SESSION["username"]; ?></h2></div>
+                <div id="close_popup" title="Sluiten" onclick="closeProfilePopup()"><p>X</p></div>
+            </div>
+
             <script type="text/javascript">
                     var popup = document.getElementById("popup")
+                    var profilepopup = document.getElementById("profilePopup")
 
                     function openPopup()
-                    {
+                    {   
                         popup.style.display = "block";
+
                     }
 
                     function closePopup()
                     {
                         popup.style.display = "none";
                     }
+
+
+                    function openProfilePopup()
+                    {   
+                        profilepopup.style.display = "block";
+
+                    }
+
+                    function closeProfilePopup()
+                    {
+                        profilepopup.style.display = "none";
+                    }
+
             </script>
 
         </div>

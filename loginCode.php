@@ -23,6 +23,8 @@ $_SESSION["username"] = $username;
 
 
 
+
+
 //connectie, bereid sql query voor
 $query = $conn->prepare("SELECT * FROM `gebruiker` WHERE `email` = :email");
 //voer query uit waar emailiput is $username
@@ -30,6 +32,7 @@ $query->execute(array('email' => $username));
 
 //vraag gegevens op
 $data = $query->fetch();
+
 
 //met hash BCRYPT, checkt of wachtwoord overeenkomt met de gegevens uit de database
 if(password_verify($password, $data['wachtwoord'])){
