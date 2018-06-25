@@ -71,24 +71,29 @@ body {
 
 #floor1 {
     margin-top:20px;
+    cursor: pointer;
 }
 
 #floor2 {
     margin-top:90px;
+    cursor: pointer;
 }
 
 #floor3 {
     margin-top:160px;
+    cursor: pointer;
 }
 
 #uitloggen {
     margin-top: 230px;
     text-align: center;
+    cursor: pointer;
 }
 
 #adminpage {
     margin-top: 300px;
     text-align: center;
+    cursor: pointer;
 }
 
 .floorsquare{
@@ -143,6 +148,7 @@ body {
     margin-right:120px;
     margin-left:300px;
     display:none;
+
 }
 
 .details {
@@ -259,6 +265,7 @@ body {
     border-style: solid;
     border-width: 1px;
     text-align: center;
+    cursor: pointer;
 }
 
 #time1{
