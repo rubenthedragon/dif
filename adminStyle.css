@@ -30,15 +30,18 @@ body {
 
 #ruimteTable{
     width: 50%;
+    display: inline;
+    max-height: 628px;
 }
 
 #gebruikerInfoTable{
     margin-left: 10%;
     display: inline;
     position: absolute;
+    max-height: 628px;
 }
 
-table, td, th{
+table, td, th{ 
     border: 3px solid grey;
     margin-left: 10%;
 }
@@ -52,3 +55,11 @@ table, td, th{
     transition: 0.3s;
     background-color: yellow;
 }
+
+.datumGegevens{
+    position: absolute;
+    float: left;
+    margin-top: 590px;
+    margin-left: 10px;
+}
+

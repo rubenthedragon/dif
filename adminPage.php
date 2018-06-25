@@ -17,7 +17,7 @@ $tijden = array("9:00-10:00","10:00-11:00","11:00-12:00","12:00-13:00","13:00-14
     <link rel="stylesheet" type="text/css" media="screen" href="adminStyle.css" />
     <script src="adminPage.js"></script>
 </head>
-    <body>
+    <body onload="startTime()">
         <form method="POST" action="administratieTabel.php">
             <div class="content">
                 <div class="ruimtedetails">
@@ -108,6 +108,10 @@ $tijden = array("9:00-10:00","10:00-11:00","11:00-12:00","12:00-13:00","13:00-14
                             </td>
                         <?php endwhile ?>
                     </table>
+                    <div class="datumGegevens">
+                    <div id="tijd"></div>
+                    <div id="datum"><?php echo date("l d-m-y"); ?></div>
+                    </div>
                 </div>
             </div>
         </form>
