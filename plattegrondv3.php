@@ -1,5 +1,10 @@
-<?php  
+<?php
+if(isset($_GET['id']))
+{
+    $id = $_GET['id'];
+    session_id($id);
     session_start();
+}
 ?>
 <html>
 <head>
@@ -92,7 +97,7 @@
             </div>  
             
             <!--uitloggen vakje met onclick verwijzing naar het login document-->
-            <div class="floorbox" id="uitloggen" onclick="location.href='login.html'">
+            <div class="floorbox" id="uitloggen" type="button" onclick='loggingout("<?php print $id ?>")'>
                 <p>Uitloggen</p>
             </div>
             
@@ -101,7 +106,7 @@
             </div>  
 
             <div id = "naam" onclick="openProfilePopup()">
-                <p><h3><?php echo  $_SESSION["username"]; ?></h3></p>
+                <p id="usernameText"><?php echo  $_SESSION["username"]; ?></p>
             </div>
 
             <div id="popup">
@@ -148,72 +153,3 @@
     </div>
 </body>
 </html>
-
-            <script>
-            function reserve()
-            {
-                var data = sendres();
-                reserveajax(data);
-            }
-
-            function sendres()
-            {
-                //variabelen
-                var user = getQueryVariable("username");
-                var datebox = document.getElementById("datum");
-                var datetext = datebox.value;
-                
-                var time;
-                var time1 = document.getElementById('time1');
-                var time2 = document.getElementById('time2');
-                var time3 = document.getElementById('time3');
-                var time4 = document.getElementById('time4');
-                var time5 = document.getElementById('time5');
-                var time6 = document.getElementById('time6');
-                var time7 = document.getElementById('time7');
-                var time8 = document.getElementById('time8');
-                
-                //verander kleur als er op geklikt is
-                if(time1.style.backgroundColor == "yellow"){
-                    time = "9:00-10:00"
-                }
-                else if(time2.style.backgroundColor == "yellow"){
-                    time = "10:00-11:00"
-                }
-                else if(time3.style.backgroundColor == "yellow"){
-                    time = "11:00-12:00"
-                }
-                else if(time4.style.backgroundColor == "yellow"){
-                    time = "12:00-13:00"
-                }
-                else if(time5.style.backgroundColor == "yellow"){
-                    time = "13:00-14:00"
-                }
-                else if(time6.style.backgroundColor == "yellow"){
-                    time = "14:00-15:00"
-                }
-                else if(time7.style.backgroundColor == "yellow"){
-                    time = "15:00-16:00"
-                }
-                else if(time8.style.backgroundColor == "yellow"){
-                    time = "16:00-17:00"
-                }
-
-                var namebox = document.getElementById("roomname");
-                var nametext = namebox.textContent;
-                var package = "?room="+nametext+"&datum="+datetext+"&gebruiker="+user+"&tijd="+time;
-                return package;
-            }
-
-            function getQueryVariable(variable)
-            {
-                var query = window.location.search.substring(1);
-                var vars = query.split("&");
-                for (var i=0;i<vars.length;i++) {
-                        var pair = vars[i].split("=");
-                        if(pair[0] == variable){return pair[1];}
-                }
-                return(false);
-            }
-
-            </script>

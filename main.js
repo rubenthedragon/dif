@@ -102,15 +102,6 @@ function showtimezajax(){
     var time6 = document.getElementById('time6');
     var time7 = document.getElementById('time7');
     var time8 = document.getElementById('time8');
-
-    time1.style.backgroundColor = 'white';
-    time2.style.backgroundColor = 'white';
-    time3.style.backgroundColor = 'white';
-    time4.style.backgroundColor = 'white';
-    time5.style.backgroundColor = 'white';
-    time6.style.backgroundColor = 'white';
-    time7.style.backgroundColor = 'white';
-    time8.style.backgroundColor = 'white';
     
     request.onreadystatechange = handleTimezAjax;
 
@@ -239,99 +230,144 @@ function timeonclick(time){
     var time7 = document.getElementById('time7');
     var time8 = document.getElementById('time8');
 
-    //als time 1 is verander achtergrond kleur
-    if(time == 1){
+    if(time1.style.backgroundColor === 'yellow'){
+        time1.style.backgroundColor = 'white';
+    }
+
+    if(time2.style.backgroundColor == 'yellow'){
+        time2.style.backgroundColor = 'white';
+    }
+    
+    if(time3.style.backgroundColor == 'yellow'){
+        time3.style.backgroundColor = 'white';
+    }
+
+    if(time4.style.backgroundColor == 'yellow'){
+        time4.style.backgroundColor = 'white';
+    }
+
+    if(time5.style.backgroundColor == 'yellow'){
+        time5.style.backgroundColor = 'white';
+    }
+
+    if(time6.style.backgroundColor == 'yellow'){
+        time6.style.backgroundColor = 'white';
+    }
+
+    if(time7.style.backgroundColor == 'yellow'){
+        time7.style.backgroundColor = 'white';
+    }
+
+    if(time8.style.backgroundColor == 'yellow'){
+        time8.style.backgroundColor = 'white';
+    }
+
+    if(time == 1 && time1.style.backgroundColor != 'red'){
         time1.style.backgroundColor = 'yellow';
-        time2.style.backgroundColor = 'white';
-        time3.style.backgroundColor = 'white';
-        time4.style.backgroundColor = 'white';
-        time5.style.backgroundColor = 'white';
-        time6.style.backgroundColor = 'white';
-        time7.style.backgroundColor = 'white';
-        time8.style.backgroundColor = 'white';
     }
 
-    //als time 2 is verander achtergrond kleur
-    if(time == 2){
-
+    if(time == 2 && time2.style.backgroundColor != 'red'){
         time2.style.backgroundColor = 'yellow';
-        time3.style.backgroundColor = 'white';
-        time4.style.backgroundColor = 'white';
-        time5.style.backgroundColor = 'white';
-        time6.style.backgroundColor = 'white';
-        time7.style.backgroundColor = 'white';
-        time8.style.backgroundColor = 'white';
     }
 
-    //als time 3 is verander achtergrond kleur
-    if(time == 3){
-        time1.style.backgroundColor = 'white';
-        time2.style.backgroundColor = 'white';
+    if(time == 3 && time3.style.backgroundColor != 'red'){
         time3.style.backgroundColor = 'yellow';
-        time4.style.backgroundColor = 'white';
-        time5.style.backgroundColor = 'white';
-        time6.style.backgroundColor = 'white';
-        time7.style.backgroundColor = 'white';
-        time8.style.backgroundColor = 'white';
     }
 
-    //als time 4 is verander achtergrond kleur
-    if(time == 4){
-        time1.style.backgroundColor = 'white';
-        time2.style.backgroundColor = 'white';
-        time3.style.backgroundColor = 'white';
+    if(time == 4 && time4.style.backgroundColor != 'red'){
         time4.style.backgroundColor = 'yellow';
-        time5.style.backgroundColor = 'white';
-        time6.style.backgroundColor = 'white';
-        time7.style.backgroundColor = 'white';
-        time8.style.backgroundColor = 'white';
     }
 
-    //als time 5 is verander achtergrond kleur
-    if(time == 5){
-        time1.style.backgroundColor = 'white';
-        time2.style.backgroundColor = 'white';
-        time3.style.backgroundColor = 'white';
-        time4.style.backgroundColor = 'white';
+    if(time == 5 && time5.style.backgroundColor != 'red'){
         time5.style.backgroundColor = 'yellow';
-        time6.style.backgroundColor = 'white';
-        time7.style.backgroundColor = 'white';
-        time8.style.backgroundColor = 'white';
     }
 
-    //als time 6 is verander achtergrond kleur
-    if(time == 6){
-        time1.style.backgroundColor = 'white';
-        time2.style.backgroundColor = 'white';
-        time3.style.backgroundColor = 'white';
-        time4.style.backgroundColor = 'white';
-        time5.style.backgroundColor = 'white';
+    if(time == 6 && time6.style.backgroundColor != 'red'){
         time6.style.backgroundColor = 'yellow';
-        time7.style.backgroundColor = 'white';
-        time8.style.backgroundColor = 'white';
     }
 
-    //als time 7 is verander achtergrond kleur
-    if(time == 7){
-        time1.style.backgroundColor = 'white';
-        time2.style.backgroundColor = 'white';
-        time3.style.backgroundColor = 'white';
-        time4.style.backgroundColor = 'white';
-        time5.style.backgroundColor = 'white';
-        time6.style.backgroundColor = 'white';
+    if(time == 7 && time7.style.backgroundColor != 'red'){
         time7.style.backgroundColor = 'yellow';
-        time8.style.backgroundColor = 'white';
     }
 
-    //als time 8 is verander achtergrond kleur
-    if(time == 8){
-        time1.style.backgroundColor = 'white';
-        time2.style.backgroundColor = 'white';
-        time3.style.backgroundColor = 'white';
-        time4.style.backgroundColor = 'white';
-        time5.style.backgroundColor = 'white';
-        time6.style.backgroundColor = 'white';
-        time7.style.backgroundColor = 'white';
+    if(time == 8 && time8.style.backgroundColor != 'red'){
         time8.style.backgroundColor = 'yellow';
     }
+}
+
+function loggingout(iets)
+{
+    var sid = iets;
+
+    request.onreadystatechange = handlelogoutajax;
+
+    request.open('GET', 'logout.php?id='+iets, true);
+    request.send();
+}
+
+function handlelogoutajax()
+{
+    if(request.readyState === XMLHttpRequest.DONE)
+    {
+        if(request.status === 200)
+        {   
+            window.location.href = 'login.html';
+        }
+    }
+}
+
+function reserve()
+{
+    var data = sendres();
+    reserveajax(data);
+}
+
+function sendres()
+{
+    //variabelen
+    var user = document.getElementById("usernameText");
+    var usertext = user.textContent;
+    var datebox = document.getElementById("datum");
+    var datetext = datebox.value;
+    
+    var time;
+    var time1 = document.getElementById('time1');
+    var time2 = document.getElementById('time2');
+    var time3 = document.getElementById('time3');
+    var time4 = document.getElementById('time4');
+    var time5 = document.getElementById('time5');
+    var time6 = document.getElementById('time6');
+    var time7 = document.getElementById('time7');
+    var time8 = document.getElementById('time8');
+    
+    //verander kleur als er op geklikt is
+    if(time1.style.backgroundColor == "yellow"){
+        time = "9:00-10:00"
+    }
+    else if(time2.style.backgroundColor == "yellow"){
+        time = "10:00-11:00"
+    }
+    else if(time3.style.backgroundColor == "yellow"){
+        time = "11:00-12:00"
+    }
+    else if(time4.style.backgroundColor == "yellow"){
+        time = "12:00-13:00"
+    }
+    else if(time5.style.backgroundColor == "yellow"){
+        time = "13:00-14:00"
+    }
+    else if(time6.style.backgroundColor == "yellow"){
+        time = "14:00-15:00"
+    }
+    else if(time7.style.backgroundColor == "yellow"){
+        time = "15:00-16:00"
+    }
+    else if(time8.style.backgroundColor == "yellow"){
+        time = "16:00-17:00"
+    }
+
+    var namebox = document.getElementById("roomname");
+    var nametext = namebox.textContent;
+    var package = "?room="+nametext+"&datum="+datetext+"&gebruiker="+usertext+"&tijd="+time;
+    return package;
 }

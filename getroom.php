@@ -5,7 +5,7 @@
 
     if($_GET["roomname"])
     {   //connectie, bereid sql query voor
-        $query = $conn->prepare("SELECT * FROM room WHERE nummer = :nummer"); 
+        $query = $conn->prepare("SELECT * FROM room WHERE nummer = :nummer");
         //voer query uit waar nummer is $id
         $query->execute(['nummer' => $id]); 
         //Haal gegevens op
