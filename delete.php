@@ -36,15 +36,11 @@ if (isset($_REQUEST["Update"]))
 		for($i = 0; $i < count($upd); $i++)
 		{
 			$selectNummer = $_REQUEST['roomSel'];
-			$selectDatum = $_POST['datumSel'];
+			$selectDatum = $_REQUEST['datumSel'];
 			$selectTijd = $_REQUEST['tijdSel'];
 			$b = explode(",", $upd[$i]);
-			echo "$b[0],";
-			echo "$b[1],";
-			echo "$b[2],";
-			echo "$b[3],";
-
-			$queryDel = $conn->prepare("UPDATE reservering SET nummer = $selectNummer, datum = $selectDatum, tijd = $selectTijd WHERE nummer = :nummer AND datum = :datum AND tijd = :tijd");
+			$row = $b[3];
+			$queryDel = $conn->prepare("UPDATE reservering SET nummer = '$selectNummer[$row]', datum = '$selectDatum[$row]', tijd = '$selectTijd[$row]' WHERE nummer = :nummer AND datum = :datum AND tijd = :tijd");
 			$queryDel->execute([
 				'nummer' => $b[0],
 				'datum' => $b[1],
@@ -52,7 +48,7 @@ if (isset($_REQUEST["Update"]))
 			]);
 		}
 	}
-	//header("Location: ./adminPage.php");
+	header("Location: ./adminPage.php");
 }
 
  ?>
