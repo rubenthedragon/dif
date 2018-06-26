@@ -1,4 +1,3 @@
-
 	var i = 0; //begin afbeelding
 	var afbeelding = []; //afbeelding array
 	var tijd = 2000; //aantal miliseconden per afbeelding
@@ -25,4 +24,3 @@
 	}
 	//als scherm geladen is begin gelijk met de slideshow
 	window.onload = veranderAfb;
-
