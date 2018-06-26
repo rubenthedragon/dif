@@ -16,6 +16,7 @@ if (isset($_REQUEST["Delete"])) {
 		'datum' => $a[1],
 		'tijd' => $a[2]
 	]);
+	header("Location: adminPage.php");
 	
 	}
 
