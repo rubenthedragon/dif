@@ -74,7 +74,8 @@ $tijden = array("9:00-10:00","10:00-11:00","11:00-12:00","12:00-13:00","13:00-14
                                 </p>
                             </center>
                             </td>
-                            <td><input type="checkbox" name="verw[]" value="<?php echo $rowR["nummer"];   echo $rowR["gebruiker"]; echo $rowR["datum"]; echo $rowR["tijd"]; ?>"></td>
+                            <td><input type="checkbox" name="verw[]" value="<?php echo $rowR["nummer"];   echo $rowR["gebruiker"]; echo $rowR["datum"]; echo $rowR["tijd"]; ?>">
+                            </td>
                         </tr>
                         <?php endwhile ?>
                         <!--gebruikersinformatie-->
