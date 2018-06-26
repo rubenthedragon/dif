@@ -30,15 +30,20 @@ body {
 
 #ruimteTable{
     width: 50%;
-}
-
-#gebruikerInfoTable{
-    margin-left: 10%;
     display: inline;
+    max-height:calc(100% - 4px);
     position: absolute;
 }
 
-table, td, th{
+#gebruikerInfoTable{
+    margin-left: 70%;
+    width: 25%;
+    display: inline;
+    position: absolute;
+    max-height:calc(100% - 4px);
+}
+
+table, td, th{ 
     border: 3px solid grey;
     margin-left: 10%;
 }
@@ -52,3 +57,17 @@ table, td, th{
     transition: 0.3s;
     background-color: yellow;
 }
+
+.datumGegevens{
+    position: absolute;
+    float: left;
+    margin-left: 10px;
+    margin-top: 5px;
+    width: 5%;
+}
+
+#verw{
+    margin-top: 50px;
+    position: relative;
+}
+

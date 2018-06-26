@@ -17,8 +17,8 @@ $tijden = array("9:00-10:00","10:00-11:00","11:00-12:00","12:00-13:00","13:00-14
     <link rel="stylesheet" type="text/css" media="screen" href="adminStyle.css" />
     <script src="adminPage.js"></script>
 </head>
-    <body>
-        <form method="POST" action="administratieTabel.php">
+    <body onload="startTime()">
+        <form method="POST" action="delete.php">
             <div class="content">
                 <div class="ruimtedetails">
                     <!--reserveringsinformatie-->
@@ -28,6 +28,7 @@ $tijden = array("9:00-10:00","10:00-11:00","11:00-12:00","12:00-13:00","13:00-14
                             <th class="detailtablehead" >Gebruiker ID</th>
                             <th class="detailtablehead" >Datum</th>
                             <th class="detailtablehead" >Tijd</th>
+                            <th class="detailtablehead" ><input type="submit" name="Delete" value="Delete"></th>
                         </tr>
                         <?php while ($rowR = $queryR->fetch()) : ?>
                         <tr>
@@ -73,6 +74,11 @@ $tijden = array("9:00-10:00","10:00-11:00","11:00-12:00","12:00-13:00","13:00-14
                                 </p>
                             </center>
                             </td>
+                            <td>
+                                <center>
+                                    <input type="checkbox" name="verw[]" value="<?php echo $rowR["nummer"]; echo ","; echo $rowR["datum"]; echo ","; echo $rowR["tijd"]; ?>">
+                                </center>
+                            </td>
                         </tr>
                         <?php endwhile ?>
                         <!--gebruikersinformatie-->
@@ -108,6 +114,10 @@ $tijden = array("9:00-10:00","10:00-11:00","11:00-12:00","12:00-13:00","13:00-14
                             </td>
                         <?php endwhile ?>
                     </table>
+                    <div class="datumGegevens">
+                    <div id="tijd"></div>
+                    <div id="datum"><?php echo date("l d-m-y"); ?></div>
+                    </div>
                 </div>
             </div>
         </form>
