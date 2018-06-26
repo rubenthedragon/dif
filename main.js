@@ -88,25 +88,29 @@ function showtimezajax(){
     //variabelen
     var datebox = document.getElementById("datum");
     var datetext = datebox.value;
-    var namebox = document.getElementById("roomname");
-    var nametext = namebox.textContent;
+    var datedate = datetext.split("-");
+    if(datedate[0].length === 4 && datedate[1].length === 2 && datedate[2].length === 2)
+    {
+        var namebox = document.getElementById("roomname");
+        var nametext = namebox.textContent;
 
-    var timebuttons = document.getElementById("timebuttons");
-    timebuttons.style.display = 'initial';
+        var timebuttons = document.getElementById("timebuttons");
+        timebuttons.style.display = 'initial';
 
-    var time1 = document.getElementById('time1');
-    var time2 = document.getElementById('time2');
-    var time3 = document.getElementById('time3');
-    var time4 = document.getElementById('time4');
-    var time5 = document.getElementById('time5');
-    var time6 = document.getElementById('time6');
-    var time7 = document.getElementById('time7');
-    var time8 = document.getElementById('time8');
-    
-    request.onreadystatechange = handleTimezAjax;
+        var time1 = document.getElementById('time1');
+        var time2 = document.getElementById('time2');
+        var time3 = document.getElementById('time3');
+        var time4 = document.getElementById('time4');
+        var time5 = document.getElementById('time5');
+        var time6 = document.getElementById('time6');
+        var time7 = document.getElementById('time7');
+        var time8 = document.getElementById('time8');
+        
+        request.onreadystatechange = handleTimezAjax;
 
-    request.open('GET', 'gettimes.php?date='+datetext+'&room='+nametext, true);
-    request.send();
+        request.open('GET', 'gettimes.php?date='+datetext+'&room='+nametext, true);
+        request.send();
+    }
 }
 
 function handleTimezAjax()
@@ -175,7 +179,16 @@ function handleReserveAjax()
     {
         if(request.status === 200)
         {
-
+            var failpasstextbox = document.getElementById("failpasstext");
+            if(request.responseText != "nope")
+            {
+                failpasstextbox.textContent = "Succesvol gereserveerd!";              
+            }
+            else
+            {
+                failpasstextbox.textContent = "Niet succesvol gereserveerd!"; 
+            }
+            openPopup();
         }
         else{}       
     }
@@ -297,8 +310,6 @@ function timeonclick(time){
 
 function loggingout(iets)
 {
-    var sid = iets;
-
     request.onreadystatechange = handlelogoutajax;
 
     request.open('GET', 'logout.php?id='+iets, true);
