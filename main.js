@@ -175,7 +175,7 @@ function handleReserveAjax()
     {
         if(request.status === 200)
         {
-            console.log(request);
+
         }
         else{}       
     }
