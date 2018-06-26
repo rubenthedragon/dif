@@ -26,5 +26,9 @@
         echo $room;
         echo $tijd;
         echo $datum;
-    }     
+    }
+    else
+    {
+        echo "nope";
+    }    
 ?>

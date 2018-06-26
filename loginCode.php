@@ -19,17 +19,20 @@ if (isset($_POST['submit']))
 		{
 			session_start();
 			//variabelen
-			$username = $_POST['email'];
+			$email = $_POST['email'];
 			$password = $_POST['password'];
-			$_SESSION['username'] = $username;
 
 			//connectie, bereid sql query voor
 			$query = $conn->prepare("SELECT * FROM `gebruiker` WHERE `email` = :email");
 			//voer query uit waar emailiput is $username
-			$query->execute(array('email' => $username));
+			$query->execute(array('email' => $email));
 
 			//vraag gegevens op
 			$data = $query->fetch();
+			
+			$_SESSION['username'] = $data['naam'];
+			$_SESSION['email'] = $data['email'];
+
 
 			//met hash BCRYPT, checkt of wachtwoord overeenkomt met de gegevens uit de database
 			if(password_verify($password, $data['wachtwoord']))
