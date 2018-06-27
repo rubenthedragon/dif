@@ -146,7 +146,7 @@ $rows = -1;
                     </div>
                     
                     <div id= "profilePic" onclick="openProfilePopup()">
-                        <p><img src="profile.png"></p>
+                        <p><img src="resources/profile.png"></p>
                     </div>  
 
                     <div id = "naam" onclick="openProfilePopup()">

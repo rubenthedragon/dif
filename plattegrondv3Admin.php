@@ -106,7 +106,7 @@ if(isset($_GET['id']))
             </div>
             
             <div id= "profilePicV3" onclick="openProfilePopup()">
-                <p><img src="profile.png"></p>
+                <p><img src="resources/profile.png"></p>
             </div>  
 
             <div id = "naamV3" onclick="openProfilePopup()">
@@ -114,7 +114,7 @@ if(isset($_GET['id']))
             </div>
 
             <div id="popup">
-                <div id="checkMark"><img src="checkMark.png"></div>
+                <div id="checkMark"><img src="resources/checkMark.png"></div>
                 <div id="succes"><h2 id="failpasstext"></h2></div>
                 <div id="close_popup" title="Sluiten" onclick="closePopup()"><p>X</p></div>
             </div>
