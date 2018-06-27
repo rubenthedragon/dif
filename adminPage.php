@@ -18,7 +18,7 @@ $rows = -1;
     <script src="adminPage.js"></script>
 </head>
     <body onload="startTime()">
-        <form method="POST" action="delete.php">
+        <form method="post" action="delete.php">
             <div class="content">
                 <div class="ruimtedetails">
                     <!--reserveringsinformatie-->
@@ -42,7 +42,7 @@ $rows = -1;
                                         <?php
                                             foreach($roomnames as $name) {
                                         ?>
-                                        <option ><?php echo $name; ?></option>
+                                        <option><?php echo $name; ?></option>
                                             <?php } ?>
                                     </select>
                                 </p>
@@ -56,7 +56,7 @@ $rows = -1;
                             <td> 
                                 <center>  
                                     <p>
-                                        <?php echo $rowR["datum"]; ?> =>
+                                        <?php echo $rowR["datum"]; ?> =>  
                                         <input type="date" name="datumSel[]" value="<?php echo $rowR["datum"]; ?>">
                                     </p>
                                 </center>

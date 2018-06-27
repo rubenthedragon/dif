@@ -24,6 +24,8 @@ if (isset($_REQUEST["Delete"]))
 	header("Location: ./adminPage.php");
 }
 
+
+
 if (isset($_REQUEST["Update"]))
 {
 	$upd=$_REQUEST["upd"];
