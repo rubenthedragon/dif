@@ -432,3 +432,277 @@ body {
     border-style:solid;
     margin-left: 100px;
 }
+
+#container {
+	position: absolute;
+	height: 65%; 
+	width: 50%;
+	margin-top: 6%;
+	margin-bottom: 12.5%;
+	margin-left: 25%;
+	margin-right: 25%;
+	border-radius: 5%;
+	background: white;
+	min-width:410px;
+}
+
+#afbeeldingDIF {
+	position: absolute;
+	width: 45%;
+	height: 80%;
+	margin-top: 5%;
+	margin-left: 5%;
+	background-image: url("https://www.dutchinnovationpark.nl/wp-content/uploads/2017/10/dif4.png");
+	background-size: contain;
+	background-repeat:no-repeat;
+}
+
+#registratieform {
+	position: absolute;
+	width: 50%;
+	height:100%;
+	margin-left:45%;
+	margin-top:5%;
+	margin-right:3%;
+	min-width:400px;
+}
+
+#RegistrerenText {
+	position: absolute;
+	font-size: 450%;
+}
+
+#MeldjenuaanText {
+	position: absolute;
+	font-size: 200%;
+	margin-left: 1px;
+	margin-top: 80px;
+	height:30px;
+}
+
+#register {
+	position: absolute;
+	margin-top:140px;
+}
+
+#table1 {
+	border-spacing: 15px;
+	margin-left: -14px;
+}
+
+#checkbox {
+	position: absolute;
+	margin-left: 105%;
+	margin-top: 84%;
+	width: 40%;
+	height: 43%;
+}
+
+/*media query om de site responsive te maken (max-width: 1300px)*/
+@media screen and (max-width: 1300px) {
+	#afbeeldingDIF{
+		display:none;
+	}
+}
+
+/*media query om de site responsive te maken (max-width: 900px)*/
+@media screen and (max-width: 900px){
+	#registratieform{
+		margin-left:5%;
+	}
+}
+
+/*WachtwoordVergeten*/
+#container3 {
+	position: absolute;
+	height: 460px; 
+	width: 702px;
+	margin-top: 6%;
+	margin-bottom: 12.5%;
+	margin-left: 25%;
+	margin-right: 25%;
+	border-radius: 5%;
+	background: white;
+	min-width:410px;
+	background-image: url("afbeelding.png");
+}
+
+#box {
+	position: absolute;
+	margin-left:25%;
+	margin-top:15%;
+	margin-right:3%;
+	min-width:400px;
+}
+
+#table2 {
+	font-size: 30px;
+	border-spacing: 0px;
+	padding-bottom: 0px;
+	margin-top: 10px;
+}
+
+/*media query om de site responsive te maken (max-width: 1300px)*/
+@media screen and (max-width: 1300px) {
+	#table2{
+		margin-left:-10%;
+	}
+}
+
+/*media query om de site responsive te maken (max-width: 900px)*/
+@media screen and (max-width: 900px){
+	#table2{
+		margin-left:-20%;
+	}
+}
+
+.detailtablehead {
+    background-color: lightgray;
+    margin: 12px 12px 12px 12px;
+    padding: 12px 12px 12px 12px;
+}
+.detailstable {
+    border-style: solid;
+    border-spacing: 10px;
+    border-width: 3px;
+    float: left;
+    overflow-y:auto;
+    overflow-x: auto;
+    border: 3px solid grey;
+}
+
+#ruimteTable{
+    width: 50%;
+    display: inline;
+    max-height:calc(100% - 4px);
+    position: absolute;
+    margin-top: -550px;
+    margin-left: 130px;
+}
+
+#gebruikerInfoTable{
+    margin-left: 70%;
+    width: 25%;
+    display: inline;
+    position: absolute;
+    max-height:calc(100% - 4px);
+    margin-top: -550px;
+}
+.admindata{
+    border: 3px solid grey;
+}
+
+th{ 
+    margin-left: 10%;
+}
+
+.adminbox{
+    border-width:3px;
+    border-color: gray;
+}
+
+.adminbox:hover{
+    transition: 0.3s;
+    background-color: yellow;
+}
+
+.datumGegevens{
+    position: absolute;
+    float: left;
+    margin-left: 10px;
+    margin-top: 5px;
+    width: 5%;
+    margin-top: -545px;
+}
+
+#verw{
+    margin-top: 50px;
+    position: relative;
+}
+
+#uitloggenAd{
+    width: 90px;
+    height: 50px;
+    border-style:solid;
+    border-width:2px;
+    text-align: center;
+    margin-left: 22px;
+    margin-top: 550px;
+    cursor: pointer;
+}
+
+#profilePopup{
+    width: 300px;
+    height: 350px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    border-style:solid;
+    border-width: 3px;
+    margin-top: 150px;
+    margin-left: 550px;
+    display: none;
+}
+
+#profilePic{
+    margin-top: -673px;
+    margin-left: 150px;
+    float: right;
+    margin-right: 210px;
+}
+
+#naam{
+    margin-top: -673px;
+    margin-left: -90px;
+}
+
+#profilePic p{
+    cursor: pointer;
+}
+
+#naam p{
+    cursor: pointer;
+}
+
+#profileAfb{
+   text-align: center;
+   margin-top: 10px;
+}
+
+#profiledatatable{
+    text-align: center;
+    margin-top: 30px;
+}
+
+#profiledatatable {
+    margin-left:30px;
+}
+
+#gebruikerAdmin{
+    text-align: center;
+}
+
+#line{
+    width: 100px;
+    height: 0px;
+    border-style:solid;
+    margin-left: 100px;
+}
+
+#close_popup{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    border: 2px solid black;
+    text-align: center;    
+    right: 5px;
+    top: 5px;
+}
+
+#close_popup p{
+    margin-top: 5px;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}

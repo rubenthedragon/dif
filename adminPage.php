@@ -25,7 +25,7 @@ $rows = -1;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Admin Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="adminStyle.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="mainv2.css" />
     <script src="adminPage.js"></script>
     <script src="main.js"></script>
 </head>
@@ -141,7 +141,7 @@ $rows = -1;
                     <div id="datum"><?php echo date("l d-m-y"); ?></div>
                     </div>
                      <!--uitloggen vakje met onclick verwijzing naar het login document-->
-                    <div id="uitloggen" type="button" onclick='loggingout("<?php print $id ?>")'>
+                    <div id="uitloggenAd" type="button" onclick='loggingout("<?php print $id ?>")'>
                         <p>Uitloggen</p>
                     </div>
                     
