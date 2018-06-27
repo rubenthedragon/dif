@@ -109,16 +109,24 @@ th{
     margin-right: 210px;
 }
 
-#naam{
+#usernameText{
     margin-top: -673px;
-    margin-left: -90px;
+    float: right;
+
+
+}
+
+#naam{
+     margin-top: -663px;
+     float: right;
+     margin-right: 170px;
 }
 
 #profilePic p{
     cursor: pointer;
 }
 
-#naam p{
+#usernameText p{
     cursor: pointer;
 }
 
