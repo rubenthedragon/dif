@@ -1,5 +1,10 @@
 <?php  
+if(isset($_GET['id']))
+{
+    $id = $_GET['id'];
+    session_id($id);
     session_start();
+}
 ?>
 <html>
 <head>
@@ -89,37 +94,47 @@
                 <div class="floornr">
                         <p class="floortext">3</p>
                 </div>
-            </div>        
-            
-            <!--uitloggen vakje met onclick verwijzing naar het login document-->
-            <div class="floorbox" id="uitloggen" onclick="location.href='login.html'">
-                <p>Uitloggen</p>
-            </div>
-            
-            <!--admin knop met verwijzing naar de admin pagina-->
+            </div>   
+
+             <!--admin knop met verwijzing naar de admin pagina-->
             <div class="floorbox" id="adminpage" onclick="location.href='adminPage.php'">
                 <p>Administratie</p>
             </div>
-
-             <div id= "profilePic" onclick="openProfilePopup()">
+            
+            <div class="floorbox" id="uitloggen" type="button" onclick='loggingout("<?php print $id ?>")'>
+                <p>Uitloggen</p>
+            </div>
+            
+            <div id= "profilePic" onclick="openProfilePopup()">
                 <p><img src="profile.png"></p>
             </div>  
 
             <div id = "naam" onclick="openProfilePopup()">
-                <p><h3><?php echo  $_SESSION["username"]; ?></h3></p>
+                <p id="usernameText"><h3><?php echo  $_SESSION["username"]; ?></h3></p>
             </div>
 
             <div id="popup">
                 <div id="checkMark"><img src="checkMark.png"></div>
-                <div id="succes"><h2>Succesvol gereserveerd!</h2></div>
+                <div id="succes"><h2 id="failpasstext"></h2></div>
                 <div id="close_popup" title="Sluiten" onclick="closePopup()"><p>X</p></div>
             </div>
 
             <div id="profilePopup">
                 <div id="profileAfb"><img src="anonymous.png"></div>
-                <div id="gebruikerAdmin"><h2><?php echo "Admin"; ?></h2></div>
+                <div id="gebruikerAdmin"><h2><?php echo "Gebruiker"; ?></h2></div>
                 <div id="line"></div>
-                <div id="profileEmail"><h2><?php echo  $_SESSION["username"]; ?></h2></div>
+                <div id="profiledatatable">
+                    <table id="profiledata">
+                        <tr>
+                            <td><h2>Email:</h2></td>
+                            <td><h2><?php echo $_SESSION["email"]; ?></h2></td>
+                        </tr>
+                        <tr>
+                            <td><h2>Naam:</h2></td>
+                            <td><h2><?php echo $_SESSION["username"]; ?></h2></td>
+                        </tr>
+                    </table>
+                </div>
                 <div id="close_popup" title="Sluiten" onclick="closeProfilePopup()"><p>X</p></div>
             </div>
 
@@ -128,9 +143,8 @@
                     var profilepopup = document.getElementById("profilePopup")
 
                     function openPopup()
-                    {   
+                    {
                         popup.style.display = "block";
-
                     }
 
                     function closePopup()
@@ -138,8 +152,7 @@
                         popup.style.display = "none";
                     }
 
-
-                    function openProfilePopup()
+                     function openProfilePopup()
                     {   
                         profilepopup.style.display = "block";
 
@@ -149,7 +162,6 @@
                     {
                         profilepopup.style.display = "none";
                     }
-
             </script>
 
         </div>
