@@ -3,11 +3,11 @@
 	var tijd = 2000; //aantal miliseconden per afbeelding
 
 	//Afbeeldingen
-	afbeelding[0] = 'logo.jpg';
-	afbeelding[1] = 'logo02.jpg';
-	afbeelding[2] = 'logo3.jpg';
-	afbeelding[3] = 'logo4.jpg';
-	afbeelding[4] = 'logo5.jpg';
+	afbeelding[0] = 'resources/logo.jpg';
+	afbeelding[1] = 'resources/logo2.jpg';
+	afbeelding[2] = 'resources/logo3.jpg';
+	afbeelding[3] = 'resources/logo4.jpg';
+	afbeelding[4] = 'resources/logo5.jpg';
 
 
 	//Verander de afbeelding

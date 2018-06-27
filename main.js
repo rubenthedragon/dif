@@ -16,6 +16,9 @@ function showfloor(nr)
     var threefloortwo = document.getElementById('threefloortwo');
     var threefloorthree = document.getElementById('threefloorthree');
 
+    var timebuttons = document.getElementById("timebuttons");
+    timebuttons.style.display = 'none';
+
     //als de verdieping 1 is:
     if(nr === 1)
     {   
@@ -105,6 +108,14 @@ function showtimezajax(){
         var time6 = document.getElementById('time6');
         var time7 = document.getElementById('time7');
         var time8 = document.getElementById('time8');
+        time1.style.backgroundColor ='white';
+        time2.style.backgroundColor ='white';
+        time3.style.backgroundColor ='white';
+        time4.style.backgroundColor ='white';
+        time5.style.backgroundColor ='white';
+        time6.style.backgroundColor ='white';
+        time7.style.backgroundColor ='white';
+        time8.style.backgroundColor ='white';
         
         request.onreadystatechange = handleTimezAjax;
 

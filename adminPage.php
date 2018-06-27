@@ -153,7 +153,7 @@ $rows = -1;
                         <p id="usernameText"><h3><?php echo  $_SESSION["username"]; ?></h3></p>
                     </div>
                     <div id="profilePopup">
-                        <div id="profileAfb"><img src="anonymous.png"></div>
+                        <div id="profileAfb"><img src="resources/anonymous.png"></div>
                         <div id="gebruikerAdmin"><h2><?php echo "Gebruiker"; ?></h2></div>
                         <div id="line"></div>
                         <div id="profiledatatable">

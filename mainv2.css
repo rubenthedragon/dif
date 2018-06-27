@@ -524,7 +524,7 @@ body {
 	border-radius: 5%;
 	background: white;
 	min-width:410px;
-	background-image: url("afbeelding.png");
+	background-image: url("resources/afbeelding.png");
 }
 
 #box {

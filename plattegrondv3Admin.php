@@ -20,10 +20,10 @@ if(isset($_GET['id']))
                     <table class="roomdetailstable">
                         <tr class="detailtable">
                             <!--voorzieningen van een ruimte-->
-                            <td class="detailtable"><img src="Chair.png"></td>
-                            <td class="detailtable"><img src="Table.png"></td>
-                            <td class="detailtable"><img src="PowerOutlet.png"></td>
-                            <td class="detailtable"><img src="Beamer.png"></td>
+                            <td class="detailtable"><img src="resources/Chair.png"></td>
+                            <td class="detailtable"><img src="resources/Table.png"></td>
+                            <td class="detailtable"><img src="resources/PowerOutlet.png"></td>
+                            <td class="detailtable"><img src="resources/Beamer.png"></td>
                         </tr>
                         <tr class="detailtable">
                             <!--data van de voorzieningen van een ruimte-->
@@ -120,7 +120,7 @@ if(isset($_GET['id']))
             </div>
 
             <div id="profilePopup">
-                <div id="profileAfb"><img src="anonymous.png"></div>
+                <div id="profileAfb"><img src="resources/anonymous.png"></div>
                 <div id="gebruikerAdmin"><h2><?php echo "Gebruiker"; ?></h2></div>
                 <div id="line"></div>
                 <div id="profiledatatable">
