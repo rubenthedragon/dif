@@ -53,19 +53,13 @@ $tijden = array("9:00-10:00","10:00-11:00","11:00-12:00","12:00-13:00","13:00-14
                             <td>      
                                 <center>
                                     <?php echo $rowR["gebruiker"]; ?>
-                                    <input type="text" name="gebruiker"  size="10">
                                 </center>
                             </td>
                             <td> 
                                 <center>  
                                     <p>
-                                        <?php echo $rowR["datum"]; ?> =>
-<<<<<<< HEAD
-                                            <input type="date" name="datum" value="<?php echo $rowR["datum"]; 
-                                        ?>"> 
-=======
+                                        <?php echo $rowR["datum"]; ?> =>  
                                         <input type="date" name="datumSel[]" value="<?php echo $rowR["datum"]; ?>">
->>>>>>> 2f6c8b5101c8e14fddf83b9305fc055762103b06
                                     </p>
                                 </center>
                             </td>
@@ -91,11 +85,6 @@ $tijden = array("9:00-10:00","10:00-11:00","11:00-12:00","12:00-13:00","13:00-14
                             <td>
                                 <center>
                                     <input type="checkbox" name="verw[]" value="<?php echo $rowR["nummer"]; echo ","; echo $rowR["datum"]; echo ","; echo $rowR["tijd"]; ?>">
-                                </center>
-                            </td>
-                            <td>
-                                <center>
-                                    <input type="submit" name="update" value="Update">
                                 </center>
                             </td>
                         </tr>
