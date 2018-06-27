@@ -26,6 +26,7 @@ body {
     float: left;
     overflow-y:auto;
     overflow-x: auto;
+    border: 3px solid grey;
 }
 
 #ruimteTable{
@@ -34,6 +35,7 @@ body {
     max-height:calc(100% - 4px);
     position: absolute;
     margin-top: -550px;
+    margin-left: 130px;
 }
 
 #gebruikerInfoTable{
@@ -44,9 +46,11 @@ body {
     max-height:calc(100% - 4px);
     margin-top: -550px;
 }
-
-table, td, th{ 
+.admindata{
     border: 3px solid grey;
+}
+
+th{ 
     margin-left: 10%;
 }
 

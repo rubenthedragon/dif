@@ -47,7 +47,7 @@ $rows = -1;
                         <?php while ($rowR = $queryR->fetch()) : ?>
                         <?php  $rows++; ?>
                         <tr>
-                            <td>
+                            <td class="admindata">
                             <center>
                                 <p>
                                     <?php echo $rowR["nummer"];?> =>
@@ -61,12 +61,12 @@ $rows = -1;
                                 </p>
                             </center>
                             </td>
-                            <td>      
+                            <td class="admindata">      
                                 <center>
                                     <?php echo $rowR["gebruiker"]; ?>
                                 </center>
                             </td>
-                            <td> 
+                            <td class="admindata"> 
                                 <center>  
                                     <p>
                                         <?php echo $rowR["datum"]; ?> =>  
@@ -74,7 +74,7 @@ $rows = -1;
                                     </p>
                                 </center>
                             </td>
-                            <td>
+                            <td class="admindata">
                             <center>                        
                                 <p>
                                     <?php echo $rowR["tijd"];?> =>
@@ -89,12 +89,12 @@ $rows = -1;
                             </center>
                             </td>
                             <!--checkboxen die values van de reserveringstabel meegeven aan delete.php-->
-                            <td>
+                            <td class="admindata">
                                 <center>
                                     <input type="checkbox" name="upd[]" value="<?php echo $rowR["nummer"]; echo ","; echo $rowR["datum"]; echo ","; echo $rowR["tijd"]; echo ","; echo $rows; ?>">
                                 </center>
                             </td>
-                            <td>
+                            <td class="admindata">
                                 <center>
                                     <input type="checkbox" name="verw[]" value="<?php echo $rowR["nummer"]; echo ","; echo $rowR["datum"]; echo ","; echo $rowR["tijd"]; ?>">
                                 </center>
@@ -112,21 +112,21 @@ $rows = -1;
                         <!--while loop om de gegevens in de tabel te plaatsen-->
                         <?php while ($rowG = $queryG->fetch()) : ?>
                         <tr>
-                            <td>
+                            <td class="admindata">
                                 <center>
                                     <p >
                                         <?php echo $rowG["id"];?>
                                     </p>
                                 </center>
                             </td>
-                            <td>
+                            <td class="admindata">
                                 <center>
                                     <p >
                                         <?php echo $rowG["naam"];?>
                                     </p>
                                 </center>
                             </td>
-                            <td>
+                            <td class="admindata">
                                 <center>
                                     <p >
                                         <?php echo $rowG["email"];?>
