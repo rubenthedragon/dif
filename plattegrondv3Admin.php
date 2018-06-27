@@ -141,23 +141,23 @@ if(isset($_GET['id']))
             <script type="text/javascript">
                     var popup = document.getElementById("popup")
                     var profilepopup = document.getElementById("profilePopupV3")
-
+                    //zorgt dat de popup(reserveren) zichtbaar wordt
                     function openPopup()
                     {
                         popup.style.display = "block";
                     }
-
+                    //zorgt dat de popup(reserveren) gesloten/onzichtbaar wordt
                     function closePopup()
                     {
                         popup.style.display = "none";
                     }
-
+                    //zorgt dat de popup(profile) zichtbaar wordt
                      function openProfilePopup()
                     {   
                         profilepopup.style.display = "block";
 
                     }
-
+                    //zorgt dat de popup(profile) gesloten/onzichtbaar wordt
                     function closeProfilePopup()
                     {
                         profilepopup.style.display = "none";

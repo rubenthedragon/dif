@@ -10,13 +10,9 @@ catch(PDOException $e)
 	echo 'ERROR: ' . $e->getMessage();
 }
 
-//Als alle velden zijn ingevuld
+//Als alle velden zijn ingevuld(HTML code; invullen = required)
 if (isset($_POST['submit'])) 
 {
-	if(isset($_POST['email'])) 
-	{
-		if(isset($_POST['password'])) 
-		{
 			session_start();
 			//variabelen
 			$email = $_POST['email'];
@@ -49,8 +45,6 @@ if (isset($_POST['submit']))
 					header("Location: plattegrondv3.php?id=$sessionid");
 				}
 			}
-		} 
-	}	
 }	
 else 
 {

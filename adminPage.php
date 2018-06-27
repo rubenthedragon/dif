@@ -178,13 +178,13 @@ $rows = -1;
 
 <script type="text/javascript">
     var profilepopup = document.getElementById("profilePopup")
-
+    //zorgt dat de profilepopup zichtbaar wordt
         function openProfilePopup()
     {   
         profilepopup.style.display = "block";
 
     }
-
+    //zorgt dat de profilepopup gesloten/onzichtbaar wordt
     function closeProfilePopup()
     {
         profilepopup.style.display = "none";
