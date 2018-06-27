@@ -95,6 +95,7 @@ table, td, th{
     border-width: 3px;
     margin-top: 150px;
     margin-left: 550px;
+    display: none;
 }
 
 #profilePic{
