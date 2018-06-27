@@ -7,12 +7,16 @@ $queryG->execute();
 $roomnames = array("DIF1.01", "DIF2.01", "DIF3.01");
 $tijden = array("9:00-10:00","10:00-11:00","11:00-12:00","12:00-13:00","13:00-14:00","14:00-15:00","15:00-16:00","16:00-17:00");
 
+
 if(isset($_GET['id']))
 {
     $id = $_GET['id'];
     session_id($id);
     session_start();
 }
+
+
+$rows = -1;
 
 ?>
 <html>
@@ -39,7 +43,6 @@ if(isset($_GET['id']))
                             <th class="detailtablehead" ><input type="submit" name="Update" value="Update"></th>
                             <th class="detailtablehead" ><input type="submit" name="Delete" value="Delete"></th>
                         </tr>
-                        <?php $rows = -1; ?>
                         <?php while ($rowR = $queryR->fetch()) : ?>
                         <?php  $rows++; ?>
                         <tr>
