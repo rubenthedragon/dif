@@ -26,18 +26,21 @@ $tijden = array("9:00-10:00","10:00-11:00","11:00-12:00","12:00-13:00","13:00-14
                     <table class="detailstable" id="ruimteTable">
                         <tr class="detailtablehead">
                             <th class="detailtablehead" >Ruimte</th>
-                            <th class="detailtablehead" >Gebruiker ID</th>
+                            <th class="detailtablehead" >Gebruiker</th>
                             <th class="detailtablehead" >Datum</th>
                             <th class="detailtablehead" >Tijd</th>
+                            <th class="detailtablehead" ><input type="submit" name="Update" value="Update"></th>
                             <th class="detailtablehead" ><input type="submit" name="Delete" value="Delete"></th>
                         </tr>
+                        <?php $rows = -1; ?>
                         <?php while ($rowR = $queryR->fetch()) : ?>
+                        <?php  $rows++; ?>
                         <tr>
                             <td>
                             <center>
-                                <p id="roomsel">
+                                <p>
                                     <?php echo $rowR["nummer"];?> =>
-                                    <select>
+                                    <select name="roomSel[]">
                                         <?php
                                             foreach($roomnames as $name) {
                                         ?>
@@ -55,18 +58,22 @@ $tijden = array("9:00-10:00","10:00-11:00","11:00-12:00","12:00-13:00","13:00-14
                             </td>
                             <td> 
                                 <center>  
-                                    <p id="datumsel">
+                                    <p>
                                         <?php echo $rowR["datum"]; ?> =>
+<<<<<<< HEAD
                                             <input type="date" name="datum" value="<?php echo $rowR["datum"]; 
                                         ?>"> 
+=======
+                                        <input type="date" name="datumSel[]" value="<?php echo $rowR["datum"]; ?>">
+>>>>>>> 2f6c8b5101c8e14fddf83b9305fc055762103b06
                                     </p>
                                 </center>
                             </td>
                             <td>
                             <center>                        
-                                <p id="tijdsel">
+                                <p>
                                     <?php echo $rowR["tijd"];?> =>
-                                    <select>
+                                    <select name="tijdSel[]">
                                         <?php
                                             foreach($tijden as $tijd) {
                                         ?>
@@ -75,6 +82,11 @@ $tijden = array("9:00-10:00","10:00-11:00","11:00-12:00","12:00-13:00","13:00-14
                                     </select>
                                 </p>
                             </center>
+                            </td>
+                            <td>
+                                <center>
+                                    <input type="checkbox" name="upd[]" value="<?php echo $rowR["nummer"]; echo ","; echo $rowR["datum"]; echo ","; echo $rowR["tijd"]; echo ","; echo $rows; ?>">
+                                </center>
                             </td>
                             <td>
                                 <center>

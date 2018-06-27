@@ -48,7 +48,7 @@ if(isset($_GET['id']))
                     <dif class="timebutton" id="time6" type="button" onclick="timeonclick(6)"><p>14:00 - 15:00</p></dif>
                     <dif class="timebutton" id="time7" type="button" onclick="timeonclick(7)"><p>15:00 - 16:00</p></dif>
                     <dif class="timebutton" id="time8" type="button" onclick="timeonclick(8)"><p>16:00 - 17:00</p></dif>
-                    <dif class="timebutton" id="reserveerbtn" type="button" onclick="reserve(), openPopup()"><p>reserveer</p></dif>
+                    <dif class="timebutton" id="reserveerbtn" type="button" onclick="reserve()"><p>reserveer</p></dif>
                 </div>
             </div>
             <!--etage 1-->
@@ -106,12 +106,12 @@ if(isset($_GET['id']))
             </div>  
 
             <div id = "naam" onclick="openProfilePopup()">
-                <p id="usernameText"><?php echo  $_SESSION["username"]; ?></p>
+                <p id="usernameText"><h3><?php echo  $_SESSION["username"]; ?></h3></p>
             </div>
 
             <div id="popup">
                 <div id="checkMark"><img src="checkMark.png"></div>
-                <div id="succes"><h2>Succesvol gereserveerd!</h2></div>
+                <div id="succes"><h2 id="failpasstext"></h2></div>
                 <div id="close_popup" title="Sluiten" onclick="closePopup()"><p>X</p></div>
             </div>
 
@@ -119,7 +119,18 @@ if(isset($_GET['id']))
                 <div id="profileAfb"><img src="anonymous.png"></div>
                 <div id="gebruikerAdmin"><h2><?php echo "Gebruiker"; ?></h2></div>
                 <div id="line"></div>
-                <div id="profileEmail"><h2><?php echo  $_SESSION["username"]; ?></h2></div>
+                <div id="profiledatatable">
+                    <table id="profiledata">
+                        <tr>
+                            <td><h2>Email:</h2></td>
+                            <td><h2><?php echo $_SESSION["email"]; ?></h2></td>
+                        </tr>
+                        <tr>
+                            <td><h2>Naam:</h2></td>
+                            <td><h2><?php echo $_SESSION["username"]; ?></h2></td>
+                        </tr>
+                    </table>
+                </div>
                 <div id="close_popup" title="Sluiten" onclick="closeProfilePopup()"><p>X</p></div>
             </div>
 
