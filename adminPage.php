@@ -154,7 +154,7 @@ $rows = -1;
                     </div>
                     <div id="profilePopup">
                         <div id="profileAfb"><img src="anonymous.png"></div>
-                        <div id="gebruikerAdmin"><h2><?php echo "Gebruiker"; ?></h2></div>
+                        <div id="gebruikerAdmin"><h2><?php echo "Admin"; ?></h2></div>
                         <div id="line"></div>
                         <div id="profiledatatable">
                             <table id="profiledata">
