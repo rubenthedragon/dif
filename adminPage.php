@@ -31,6 +31,7 @@ $rows = -1;
                             <th class="detailtablehead" ><input type="submit" name="Update" value="Update"></th>
                             <th class="detailtablehead" ><input type="submit" name="Delete" value="Delete"></th>
                         </tr>
+                        <!--while loop om de gegevens in de tabel te plaatsen-->
                         <?php while ($rowR = $queryR->fetch()) : ?>
                         <?php  $rows++; ?>
                         <tr>
@@ -75,6 +76,7 @@ $rows = -1;
                                 </p>
                             </center>
                             </td>
+                            <!--checkboxen die values van de reserveringstabel meegeven aan delete.php-->
                             <td>
                                 <center>
                                     <input type="checkbox" name="upd[]" value="<?php echo $rowR["nummer"]; echo ","; echo $rowR["datum"]; echo ","; echo $rowR["tijd"]; echo ","; echo $rows; ?>">
@@ -95,6 +97,7 @@ $rows = -1;
                             <th class="detailtablehead">Naam</th>
                             <th class="detailtablehead">E-mail</th>
                         </tr>
+                        <!--while loop om de gegevens in de tabel te plaatsen-->
                         <?php while ($rowG = $queryG->fetch()) : ?>
                         <tr>
                             <td>
@@ -120,6 +123,7 @@ $rows = -1;
                             </td>
                         <?php endwhile ?>
                     </table>
+                    <!--Klok op de pagina-->
                     <div class="datumGegevens">
                     <div id="tijd"></div>
                     <div id="datum"><?php echo date("l d-m-y"); ?></div>
