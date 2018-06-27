@@ -33,6 +33,7 @@ body {
     display: inline;
     max-height:calc(100% - 4px);
     position: absolute;
+    margin-top: -550px;
 }
 
 #gebruikerInfoTable{
@@ -41,6 +42,7 @@ body {
     display: inline;
     position: absolute;
     max-height:calc(100% - 4px);
+    margin-top: -550px;
 }
 
 table, td, th{ 
@@ -64,6 +66,7 @@ table, td, th{
     margin-left: 10px;
     margin-top: 5px;
     width: 5%;
+    margin-top: -545px;
 }
 
 #verw{
@@ -71,3 +74,88 @@ table, td, th{
     position: relative;
 }
 
+#uitloggen{
+    width: 90px;
+    height: 50px;
+    border-style:solid;
+    border-width:2px;
+    text-align: center;
+    margin-left: 22px;
+    margin-top: 550px;
+    cursor: pointer;
+}
+
+#profilePopup{
+    width: 300px;
+    height: 350px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    border-style:solid;
+    border-width: 3px;
+    margin-top: 150px;
+    margin-left: 550px;
+}
+
+#profilePic{
+    margin-top: -673px;
+    margin-left: 150px;
+    float: right;
+    margin-right: 210px;
+}
+
+#naam{
+    margin-top: -673px;
+    margin-left: -90px;
+}
+
+#profilePic p{
+    cursor: pointer;
+}
+
+#naam p{
+    cursor: pointer;
+}
+
+#profileAfb{
+   text-align: center;
+   margin-top: 10px;
+}
+
+#profiledatatable{
+    text-align: center;
+    margin-top: 30px;
+}
+
+#profiledatatable {
+    margin-left:30px;
+}
+
+#gebruikerAdmin{
+    text-align: center;
+}
+
+#line{
+    width: 100px;
+    height: 0px;
+    border-style:solid;
+    margin-left: 100px;
+}
+
+#close_popup{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    border: 2px solid black;
+    text-align: center;    
+    right: 5px;
+    top: 5px;
+}
+
+#close_popup p{
+    margin-top: 5px;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
