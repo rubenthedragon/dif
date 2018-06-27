@@ -154,7 +154,7 @@ $rows = -1;
                     </div>
                     <div id="profilePopup">
                         <div id="profileAfb"><img src="resources/anonymous.png"></div>
-                        <div id="gebruikerAdmin"><h2><?php echo "Gebruiker"; ?></h2></div>
+                        <div id="gebruikerAdmin"><h2><?php echo "Admin"; ?></h2></div>
                         <div id="line"></div>
                         <div id="profiledatatable">
                             <table id="profiledata">
@@ -178,13 +178,13 @@ $rows = -1;
 
 <script type="text/javascript">
     var profilepopup = document.getElementById("profilePopup")
-
+    //zorgt dat de profilepopup zichtbaar wordt
         function openProfilePopup()
     {   
         profilepopup.style.display = "block";
 
     }
-
+    //zorgt dat de profilepopup gesloten/onzichtbaar wordt
     function closeProfilePopup()
     {
         profilepopup.style.display = "none";

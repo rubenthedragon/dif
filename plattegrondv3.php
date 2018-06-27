@@ -97,11 +97,11 @@ if(isset($_GET['id']))
                 <p>Uitloggen</p>
             </div>
             
-            <div id= "profilePic" onclick="openProfilePopup()">
+            <div id= "profilePicV3" onclick="openProfilePopup()">
                 <p><img src="profile.png"></p>
             </div>  
 
-            <div id = "naam" onclick="openProfilePopup()">
+            <div id = "naamV3" onclick="openProfilePopup()">
                 <p id="usernameText"><h3><?php echo  $_SESSION["username"]; ?></h3></p>
             </div>
 
@@ -110,9 +110,10 @@ if(isset($_GET['id']))
                 <div id="succes"><h2 id="failpasstext"></h2></div>
                 <div id="close_popup" title="Sluiten" onclick="closePopup()"><p>X</p></div>
             </div>
-
-            <div id="profilePopup">
+            
+            <div id="profilePopupV3">
                 <div id="profileAfb"><img src="resources/anonymous.png"></div>
+
                 <div id="gebruikerAdmin"><h2><?php echo "Gebruiker"; ?></h2></div>
                 <div id="line"></div>
                 <div id="profiledatatable">
@@ -132,7 +133,7 @@ if(isset($_GET['id']))
 
             <script type="text/javascript">
                     var popup = document.getElementById("popup")
-                    var profilepopup = document.getElementById("profilePopup")
+                    var profilepopup = document.getElementById("profilePopupV3")
 
                     function openPopup()
                     {

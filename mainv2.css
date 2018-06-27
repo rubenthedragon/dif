@@ -644,12 +644,33 @@ th{
     display: none;
 }
 
+#profilePopupV3{
+    width: 300px;
+    height: 350px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    border-style:solid;
+    border-width: 3px;
+    margin-top: 100px;
+    margin-left: -750px;
+    display: none;
+}
+
 #profilePic{
     margin-top: -673px;
     margin-left: 150px;
     float: right;
     margin-right: 210px;
 }
+
+#profilePicV3{
+    margin-top: -70px;
+    margin-left: 150px;
+    float: right;
+    margin-right: 210px;
+}
+
 
 #usernameText{
     margin-top: -673px;
@@ -658,6 +679,12 @@ th{
 
 #naam{
     margin-top: -663px;
+    float:right;
+    margin-right: 170px;
+}
+
+#naamV3{
+    margin-top: -73px;
     float:right;
     margin-right: 170px;
 }
