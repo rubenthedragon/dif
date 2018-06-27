@@ -97,7 +97,7 @@ if(isset($_GET['id']))
             </div>   
 
              <!--admin knop met verwijzing naar de admin pagina-->
-            <div class="floorbox" id="adminpage" onclick="location.href='adminPage.php'">
+            <div class="floorbox" id="adminpage" onclick="location.href='adminPage.php?id=<?php print $id ?>'">
                 <p>Administratie</p>
             </div>
             

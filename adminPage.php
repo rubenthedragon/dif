@@ -170,23 +170,23 @@ $rows = -1;
                         </div>
                         <div id="close_popup" title="Sluiten" onclick="closeProfilePopup()"><p>X</p></div>
                     </div>
-                     <script type="text/javascript">
-                    var profilepopup = document.getElementById("profilePopup")
-
-                     function openProfilePopup()
-                    {   
-                        profilepopup.style.display = "block";
-
-                    }
-
-                    function closeProfilePopup()
-                    {
-                        profilepopup.style.display = "none";
-                    }
-            </script>
                 </div>
             </div>
         </form>
     </body>
 </html>
 
+<script type="text/javascript">
+    var profilepopup = document.getElementById("profilePopup")
+
+        function openProfilePopup()
+    {   
+        profilepopup.style.display = "block";
+
+    }
+
+    function closeProfilePopup()
+    {
+        profilepopup.style.display = "none";
+    }
+</script>

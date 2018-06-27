@@ -37,15 +37,15 @@ if (isset($_POST['submit']))
 			//met hash BCRYPT, checkt of wachtwoord overeenkomt met de gegevens uit de database
 			if(password_verify($password, $data['wachtwoord']))
 			{
+				$sessionid = session_id();
 				if ($data['type']==1) 
 				{
 					//ga naar pagina plattegrondv3Admin
-					header("Location: plattegrondv3Admin.php");
+					header("Location: plattegrondv3Admin.php?id=$sessionid");
 				} 
 				else 
 				{
 					//ga naar pagina plattegrondv3
-					$sessionid = session_id();
 					header("Location: plattegrondv3.php?id=$sessionid");
 				}
 			}
