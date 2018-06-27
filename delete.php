@@ -20,7 +20,18 @@ if (isset($_REQUEST["Delete"])) {
 	
 	}
 
+if (isset($_REQUEST["update"])) {
+	$gebruiker = $_POST['gebruiker'];
+	$code = implode(",", $gebruiker);
 
 
-
+	$sql = "UPDATE reservering SET gebruiker = :gebruiker WHERE nummer ='DIF1.01'";
+	$stmt = $conn->prepare($sql);
+	
+	$stmt->execute([
+		':gebruiker' => $code
+	]);
+	echo "$gebruiker";
+	//header("Location: adminPage.php");
+}
  ?>

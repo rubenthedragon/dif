@@ -7,6 +7,7 @@ $queryG->execute();
 $roomnames = array("DIF1.01", "DIF2.01", "DIF3.01");
 $tijden = array("9:00-10:00","10:00-11:00","11:00-12:00","12:00-13:00","13:00-14:00","14:00-15:00","15:00-16:00","16:00-17:00");
 
+
 ?>
 <html>
 <head>
@@ -18,7 +19,7 @@ $tijden = array("9:00-10:00","10:00-11:00","11:00-12:00","12:00-13:00","13:00-14
     <script src="adminPage.js"></script>
 </head>
     <body onload="startTime()">
-        <form method="POST" action="delete.php">
+        <form method="post" action="delete.php">
             <div class="content">
                 <div class="ruimtedetails">
                     <!--reserveringsinformatie-->
@@ -40,7 +41,7 @@ $tijden = array("9:00-10:00","10:00-11:00","11:00-12:00","12:00-13:00","13:00-14
                                         <?php
                                             foreach($roomnames as $name) {
                                         ?>
-                                        <option ><?php echo $name; ?></option>
+                                        <option><?php echo $name; ?></option>
                                             <?php } ?>
                                     </select>
                                 </p>
@@ -49,14 +50,15 @@ $tijden = array("9:00-10:00","10:00-11:00","11:00-12:00","12:00-13:00","13:00-14
                             <td>      
                                 <center>
                                     <?php echo $rowR["gebruiker"]; ?>
+                                    <input type="text" name="gebruiker"  size="10">
                                 </center>
                             </td>
                             <td> 
                                 <center>  
                                     <p id="datumsel">
                                         <?php echo $rowR["datum"]; ?> =>
-                                            <input type="date" <?php echo $rowR["datum"]; 
-                                        ?>
+                                            <input type="date" name="datum" value="<?php echo $rowR["datum"]; 
+                                        ?>"> 
                                     </p>
                                 </center>
                             </td>
@@ -77,6 +79,11 @@ $tijden = array("9:00-10:00","10:00-11:00","11:00-12:00","12:00-13:00","13:00-14
                             <td>
                                 <center>
                                     <input type="checkbox" name="verw[]" value="<?php echo $rowR["nummer"]; echo ","; echo $rowR["datum"]; echo ","; echo $rowR["tijd"]; ?>">
+                                </center>
+                            </td>
+                            <td>
+                                <center>
+                                    <input type="submit" name="update" value="Update">
                                 </center>
                             </td>
                         </tr>
